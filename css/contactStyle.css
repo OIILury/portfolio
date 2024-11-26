@@ -1,0 +1,112 @@
+
+.container {
+    width: 94%;
+    height: 90%;
+    padding: 30px;
+    display: block;
+    overflow: hidden;
+    margin-top: -10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Menu*/
+.menu-sidebar {
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: left;
+}
+.sidebar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    margin: 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+
+/* Formulaire */
+.contact {
+    width: 70%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;    
+    border: 1px solid #deb887;
+}
+.contact h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #deb887;
+    outline: none;
+}
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #deb887;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form .btn:hover {
+    background-color: #c19a6b;
+}
+.contact-form textarea {
+    resize: none;
+}
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px;
+}

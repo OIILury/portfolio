@@ -1,0 +1,122 @@
+.playground-page {
+    width: 100%;
+    display: flex;    
+    align-items: left;
+    flex-direction: column;
+}
+
+
+.menu-sidebar {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: -5px;
+}
+.sidebar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    margin: 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+
+/* All Project Playground */
+.all-playground {
+    height: 85%;
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #deb887;
+}
+.zone-playground {
+    gap: 30px;
+    height: 500px;
+    display: flex;
+    padding: 30px;
+    overflow-x: hidden;
+}
+.block-playground {
+    height: 400px;
+    flex: 0 0 auto;
+    padding: 30px;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.block-playground:hover {
+    transform: scale(1.05);
+}
+.block-playground h1 {
+    margin-bottom: 30px;
+}
+.block-playground p {
+    margin-bottom: 30px;
+}
+.block-playground a {
+    text-decoration: none;
+    border: 2px solid #deb887;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.light-mode .all-playground {
+    background: #FBFCFA;
+}
+body.light-mode .block-playground {
+    background: #fff;
+}
+body.light-mode .block-playground a{
+    background: #ebeaea;
+    color: #333;
+}
+body.light-mode .block-playground a:hover{
+    background: #ddd;
+}
+
+body.dark-mode .all-playground {
+    background: #222;
+}
+body.dark-mode .block-playground {
+    background: #333;
+    border: #555;
+}
+body.dark-mode .block-playground a{
+    background: #222;
+    color: #ddd;
+}
+body.dark-mode .block-playground a:hover{
+    background: #333232;
+}

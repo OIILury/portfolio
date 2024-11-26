@@ -1,0 +1,227 @@
+.main-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    width: 94%;
+    height: 90%;
+    margin-top: -10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* titre Section */
+.titre {
+    grid-column: 1 / 2;
+    padding: 20px;
+}
+.titre h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+  
+/* Sidebar Navigation */
+.sidebar {
+    grid-column: 1 / 2;
+    padding: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    margin: 20px 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+} 
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+
+/* Theme Switch */
+.theme-switch {
+    position: fixed;
+    bottom: 5px;
+    left: 0px;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #000;
+}
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+
+/* Droits reserves */
+.droits-reserves {
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+  
+/* Main Content */
+main {
+    grid-column: 2 / 3;
+    position: relative;
+    padding: 20px;
+}  
+main .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}  
+.bio {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    max-width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    z-index: 3;
+}
+
+
+/* Cube */
+.cube-container {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    transform: translateX(-25%);
+    width: 150px;
+    height: 150px;
+    perspective: 500px;
+}
+.cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin 10s linear infinite;
+    transition: transform 0.1s;
+    cursor: grab;
+}
+.cube.dragging {
+    animation: none;
+    cursor: grabbing;
+}
+.cube .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    border: 3px solid #deb887;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.cube .front  { transform: rotateY(0deg) translateZ(75px); }
+.cube .back   { transform: rotateY(180deg) translateZ(75px); }
+.cube .left   { transform: rotateY(-90deg) translateZ(75px); }
+.cube .right  { transform: rotateY(90deg) translateZ(75px); }
+.cube .top    { transform: rotateX(90deg) translateZ(75px); }
+.cube .bottom { transform: rotateX(-90deg) translateZ(75px); }
+@keyframes spin {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        margin-top: -20px;
+        width: 93%;
+        height: 87%;
+    }
+    .titre {
+        padding: 10px;
+    }  
+    .titre h1 {
+        font-size: 1.5rem;
+    }  
+    .titre h2 {
+        font-size: 0.8rem;
+    }
+    .theme-switch {
+        font-size: 12px;
+        bottom: 8px;    
+    }
+    .droits-reserves {
+        font-size: 10px;
+        bottom: 4px;
+        right: 0px;
+        max-width: 50%;
+    }
+    .cube-container {
+        display: none; 
+    }
+    .bio {
+        margin-right: -15px;
+        margin-bottom: -15px;
+        font-size: 16px;
+        max-width: 100%;
+    }
+}

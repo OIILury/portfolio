@@ -1,0 +1,246 @@
+/* Theme Switch */
+.theme-switch {
+    position: fixed;
+    bottom: 5px;
+    left: 0px;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #000;
+}
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Droits reserves */
+.droits-reserves {
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-switch {
+        font-size: 12px;
+        bottom: 8px;    
+    }
+    .droits-reserves {
+        font-size: 10px;
+        bottom: 4px;
+        right: 0px;
+        max-width: 50%;
+    }
+}
+
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+body.light-mode .main-container {
+    background-color: #fff;
+    border-color: #ddd;
+}
+body.light-mode .titre h1, 
+body.light-mode .titre h2 {
+    color: #333;
+}
+body.light-mode .sidebar ul li a {
+    color: #333;
+}
+body.light-mode .theme-switch {
+    background-color: #fff;
+}
+body.light-mode .theme-switch span {
+    color: #666;
+}
+body.light-mode .droits-reserves {
+    background-color: #fff;
+    color: #666;
+}
+body.light-mode .bio {
+    color: #333;
+}
+body.light-mode .cube .face {
+    background: rgba(0, 0, 0, 0.1);
+}
+/* projects */
+body.light-mode .container {
+    background-color: #fff;
+    border-color: #ddd;
+}
+body.light-mode .col-gauche {
+    background-color: #fff;
+    border-color: #ddd;
+}
+body.dark-mode .project-list ul li:hover {
+    background: #ddd;
+}
+body.light-mode .project-list ul li a {
+    color: #333;
+}
+body.light-mode .col-droite {
+    background-color: #fff;
+    border-color: #ddd;
+}
+body.light-mode .content-block {
+    background-color: #fff;
+    border-color: #ddd;
+}
+/* About */
+body.light-mode .progress {
+    background: #deb887;
+}
+body.light-mode .progress-bar {
+    background: #000;
+    color: #fff;
+}
+/* Info */
+body.light-mode .contact {
+    color: #333;
+}
+body.light-mode .contact label {
+    color: #333;
+}
+body.dark-mode .contact {
+    color: #ddd;
+}
+body.dark-mode .contact label {
+    color: #ddd;
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background: #1a1a1a;
+    color: white;
+}
+/* Index */
+body.dark-mode .main-container {
+    background: #333;
+    border-color: #555;
+}
+body.dark-mode .titre h1, 
+body.dark-mode .titre h2 {
+    color: #fff;
+}
+body.dark-mode .sidebar ul li a {
+    color: #ccc;
+}
+body.dark-mode .theme-switch {
+    background: #333;
+}
+body.dark-mode .theme-switch span {
+    color: #ddd;
+}
+body.dark-mode .droits-reserves {
+    background: #333;
+    color: #ddd;
+}
+body.dark-mode .bio {
+    color: #aaa;
+}
+body.dark-mode .cube .face {
+    background: rgba(255, 255, 255, 0.1);
+}
+/* Project */
+body.dark-mode .container {
+    background: #333;
+    border-color: #555;
+}
+body.dark-mode .col-gauche {
+    background: #333;
+    border-color: #555;
+}
+body.dark-mode .project-list ul li a {
+    color: #ddd;
+    background: #222;
+}
+body.dark-mode .project-list ul li {
+    background: #222;
+}
+body.dark-mode .project-list ul li:hover {
+    background: #1a1a1a;
+}
+body.dark-mode .col-droite {
+    background: #333;
+    border-color: #555;
+}
+body.dark-mode .project-details {
+    background: #222;
+}
+body.dark-mode .content-block {
+    background: #333;
+    border: #555;
+}
+/* About */
+body.dark-mode .about {
+    color: #ccc;
+}
+body.dark-mode .about h1 {
+    color: #fff;
+}
+body.dark-mode .about h2 {
+    color: #ddd;
+}
+body.dark-mode .competence h2 {
+    color: #ddd;
+}
+body.dark-mode .progress {
+    background: #deb887;
+}
+body.dark-mode .progress-bar {
+    background: #000;
+    color: #fff;
+}
