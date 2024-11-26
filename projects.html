@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projectStyle.css">
+    <title>Projects - Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-gauche">
+            <div class="menu-sidebar">
+                <nav class="sidebar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Info</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="playground.html">Playground</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Liste des projets</h1>
+            <div class="vertical-scroll">
+                <aside class="project-list">
+                    <ul id="project-list">
+                        <!-- Liste des projets chargée dynamiquement -->
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <div class="col-droite">
+            <h1 id="project-name"></h1>
+            <h2 id="project-date"></h2>
+
+            <div class="project-details">
+                <div class="project-content" id="project-content">
+                    <!-- Contenu du projet chargé dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switch">
+        <span>Light</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+    <footer class="droits-reserves">
+        <p>&copy;2024 ROLLAND Baptiste. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/switchTheme.js"></script>
+    
+    <!-- Données directement dans le fichier -->
+    <script>
+        const data = {
+            "projects": [
+                {
+                    "id": 1,
+                    "name": "Création d'un site portfolio",
+                    "date": "2024-11-20",
+                    "description": "Site web portfolio de mes projets",
+                    "blocks": [
+                        { "type": "text", "content": "Ce projet de site a été conçu pour faire découvrir qui je suis..." },
+                        { "type": "image", "content": "indexPortfolio.png" }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Création d'une application de mini-jeux",
+                    "date": "2024-11-05",
+                    "description": "Application de mini-jeux en Python",
+                    "blocks": [
+                        { "type": "text", "content": "Ce projet a été conçu dans le cadre d’une démarche personnelle visant à améliorer mes compétences en Python tout en développant un outil pratique et ludique." },
+                        { "type": "text", "content": "Le développement m’a demandé pour le moment environ 6 heures de travail, et l’application a été pensée pour être facilement extensible." },
+                        { "type": "image", "content": "demoCalcul.mp4" },
+                        { "type": "image", "content": "EmojiSlot.png" },
+                        { "type": "image", "content": "VirtualPet.png" }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Création d'un site web pour le C2RB",
+                    "date": "2024-02-01",
+                    "description": "Site web réaliser avec Wordpress pour le C2RB",
+                    "blocks": [
+                        { "type": "text", "content": "Présentation du site C2RB" },
+                        { "type": "text", "content": "coucou" },
+                        { "type": "image", "content": "AccueilGameCollection.png" }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Création d'un site web pour le C2RB",
+                    "date": "2024-02-01",
+                    "description": "Site web réaliser avec Wordpress pour le C2RB",
+                    "blocks": [
+                        { "type": "text", "content": "Présentation du site C2RB" },
+                        { "type": "text", "content": "coucou" },
+                        { "type": "image", "content": "AccueilGameCollection.png" }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Création d'un site web pour le C2RB",
+                    "date": "2024-02-01",
+                    "description": "Site web réaliser avec Wordpress pour le C2RB",
+                    "blocks": [
+                        { "type": "text", "content": "Présentation du site C2RB" },
+                        { "type": "text", "content": "coucou" },
+                        { "type": "image", "content": "AccueilGameCollection.png" }
+                    ]
+                }
+            ]
+        };
+
+        // Le reste du code reste le même
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedProjectId = parseInt(urlParams.get('project')) || 1;
+
+        const projectList = document.getElementById('project-list');
+        const projectContent = document.getElementById('project-content');
+        const projectName = document.getElementById('project-name');
+        const projectDate = document.getElementById('project-date');
+
+        // Ajouter les projets à la liste
+        data.projects.forEach(project => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <a href="projects.html?project=${project.id}">
+                    <p>${project.name}</p>
+                    <p>${project.date}</p>
+                    <p>${project.description}</p>
+                </a>
+            `;
+            projectList.appendChild(listItem);
+        });
+
+        // Afficher le projet sélectionné
+        const selectedProject = data.projects.find(p => p.id === selectedProjectId);
+        if (selectedProject) {
+            projectName.textContent = selectedProject.name;
+            projectDate.textContent = selectedProject.date;
+            projectContent.innerHTML = ''; // Clear previous content
+
+            selectedProject.blocks.forEach(block => {
+                const blockElement = document.createElement('div');
+                blockElement.classList.add('content-block');
+                if (block.type === 'text') {
+                    blockElement.innerHTML = `<p>${block.content}</p>`;
+                } else if (block.type === 'image') {
+                    blockElement.innerHTML = `<img src="uploads/${block.content}" alt="Image">`;
+                }
+                projectContent.appendChild(blockElement);
+            });
+        } else {
+            projectContent.innerHTML = '<p>Projet introuvable !</p>';
+        }
+
+                // Cibler la colonne de défilement horizontal
+        const horizontalScroll = document.getElementById('project-content');
+
+        // Ajouter un écouteur pour l'événement 'wheel'
+        horizontalScroll.addEventListener('wheel', (event) => {
+            event.preventDefault(); // Empêche le défilement vertical par défaut
+            horizontalScroll.scrollLeft += event.deltaY; // Défiler horizontalement
+        });
+    </script>
+</body>
+</html>
