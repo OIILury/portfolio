@@ -9,36 +9,28 @@
     <title>Contact - Portfolio</title>
 </head>
 <body>
-    <div class="container"in>
+    <div class="container">
         <div class="menu-sidebar">
             <nav class="sidebar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Project</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="about.html">Info</a></li>
-                    <li><a href="playground.html">Playground</a></li>
                 </ul>
             </nav>
         </div>
         <main class="contact">
             <h1>Contactez-moi</h1>
-            <p>
-                Vous avez une idée de projet, une collaboration à proposer, ou souhaitez simplement discuter ? 
-                Remplissez le formulaire ci-dessous ou envoyez-moi un email, je serai ravi de vous répondre.
-            </p>
-
-            <form action="contact.php" method="post" class="contact-form">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
-
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
-
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" placeholder="Votre message ici..." rows="2" required></textarea>
-
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
+            <div class="contact-me">
+                <a href="https://www.linkedin.com/in/baptiste-rolland-adversussolem/" target="_blank" class="contact-link" aria-label="Visiter mon profil LinkedIn">
+                    <img src="uploads/linkedin.png" alt="Icône LinkedIn" class="contact-icon">
+                    <span>Mon LinkedIn</span>
+                </a>
+                <a href="mailto:brolland.b@gmail.com" class="contact-link" aria-label="Envoyer un e-mail">
+                    <img src="uploads/email.png" alt="Icône e-mail" class="contact-icon">
+                    <span>brolland.b@gmail.com</span>
+                </a>
+            </div>
         </main>
     </div>
 
@@ -57,4 +49,3 @@
     <script src="js/switchTheme.js"></script>
 </body>
 </html>
-

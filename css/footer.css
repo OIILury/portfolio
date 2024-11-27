@@ -76,9 +76,9 @@ input:checked + .slider:before {
     }
     .droits-reserves {
         font-size: 10px;
-        bottom: 4px;
+        bottom: 8px;
         right: 0px;
-        max-width: 50%;
+        max-width: 55%;
     }
 }
 
@@ -150,13 +150,13 @@ body.light-mode .progress-bar {
 body.light-mode .contact {
     color: #333;
 }
-body.light-mode .contact label {
+body.light-mode .contact span {
     color: #333;
 }
 body.dark-mode .contact {
     color: #ddd;
 }
-body.dark-mode .contact label {
+body.dark-mode .contact span {
     color: #ddd;
 }
 
