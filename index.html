@@ -17,11 +17,10 @@
         </header>
         <nav class="sidebar">
             <ul>
-                <li><a href="project.html">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="about.html">Info</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <br>
-                <li><a href="playground.html">Playground</a></li>
+                <li><a href="uploads/CV_ROLLAND.pdf" target="_blank" aria-label="Voir mon CV">Voir mon CV</a></li>
             </ul>
         </nav>
         <div class="cube-container">
@@ -46,8 +45,6 @@
         </main>
     </div>
 
-    
-
     <div class="theme-switch">
         <span>Light</span>
         <label class="switch">
@@ -60,26 +57,7 @@
         <p>&copy;2024 ROLLAND Baptiste. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        const themeToggle = document.getElementById("theme-toggle");
-        const body = document.body;
-        
-        // Vérifie et applique le thème stocké
-        const savedTheme = localStorage.getItem("theme") || "light-mode";
-        body.classList.add(savedTheme);
-        themeToggle.checked = savedTheme === "dark-mode";
-        
-        // Écoute les changements d'état du toggle
-        themeToggle.addEventListener("change", () => {
-          if (themeToggle.checked) {
-            body.classList.replace("light-mode", "dark-mode");
-            localStorage.setItem("theme", "dark-mode");
-          } else {
-            body.classList.replace("dark-mode", "light-mode");
-            localStorage.setItem("theme", "light-mode");
-          }
-        });
-    </script>
+    <script src="js/switchTheme.js"></script>
     <script src="js/cubeInteraction.js"></script>
 </body>
 </html>

@@ -56,6 +56,8 @@
     padding: 10px;
     border: 2px solid #deb887;
     border-radius: 5px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 .project-list ul {
     list-style: none;
