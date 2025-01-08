@@ -29,9 +29,3 @@ h2 {
     color: #666;
 }
 
-@media (max-width: 768px) {
-    body {
-        height: 99vh;
-        overflow: auto;
-    }
-}
