@@ -28,3 +28,10 @@ h2 {
     font-size: 1.2rem;
     color: #666;
 }
+
+@media (max-width: 768px) {
+    body {
+        height: 99vh;
+        overflow: hidden;
+    }
+}
