@@ -29,3 +29,12 @@ h2 {
     color: #666;
 }
 
+@media (max-width: 768px) {
+    body{
+        overflow: visible;
+    }
+    .container {
+        overflow: visible;
+    }
+
+}
