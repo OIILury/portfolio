@@ -72,13 +72,15 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
     .theme-switch {
         font-size: 12px;
-        bottom: 8px;    
+        bottom: 8px;
+        height: 35px;  
     }
     .droits-reserves {
         font-size: 10px;
         bottom: 8px;
         right: 0px;
-        max-width: 55%;
+        height: 35px;
+        max-width: 50%;
     }
 }
 
