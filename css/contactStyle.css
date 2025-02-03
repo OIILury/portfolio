@@ -37,6 +37,10 @@
     width: 70%;
     padding: 20px;
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .contact h1 {    
     padding: 5px;
@@ -75,11 +79,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .container {
-        margin-top: -40px;
-        width: 88%;
-        height: 90%;
-    }
     .menu-sidebar {
         gap: 20px;
         padding: 10px;
@@ -90,9 +89,12 @@
     }
     .contact {
         width: 90%;
-        margin-left: 5%;
         padding: 10px;
-        margin: 20px 5px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .contact-me {
         gap: 15px;
