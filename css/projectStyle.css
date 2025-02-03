@@ -13,6 +13,8 @@
     width: 30%;
     height: 100%;
     padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 .col-gauche h1 {
     margin-top: 55px;
@@ -137,4 +139,127 @@
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
+        overflow: visible;
+    }
+
+    .col-gauche {
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 10px;
+    }
+
+    .col-gauche h1 {
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .menu-sidebar {
+        padding: 5px;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .sidebar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sidebar ul li a {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+    }
+
+    .vertical-scroll {
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .project-list {
+        width: 100%;
+        margin: 0;
+        max-height: none;
+        border: none;
+        padding: 5px;
+    }
+
+    .project-list ul li {
+        height: auto;
+        padding: 15px;
+        margin-bottom: 15px;
+        background: rgba(222, 184, 135, 0.1);
+        border: 1px solid #deb887;
+    }
+
+    .col-droite {
+        width: 100%;
+        height: auto;
+        order: 1;
+        padding: 10px;
+    }
+
+    .col-droite h1 {
+        margin: 10px 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .col-droite h2 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .project-details {
+        height: auto;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #deb887;
+    }
+
+    .project-content {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+        overflow-x: visible;
+    }
+
+    .content-block {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        margin: 0;
+        background: rgba(222, 184, 135, 0.1);
+    }
+
+    .content-block p {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .content-block img,
+    .content-block video {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    .content-block:hover {
+        transform: none;
+    }
 }
