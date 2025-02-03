@@ -62,8 +62,9 @@
     color: #333;
     padding: 10px;
     gap: 10px;        
-    border-radius: 8px;    
+    border-radius: 8px;
     border: 1px solid #deb887;
+    background: rgba(222, 184, 135, 0.1);
     transition: color 0.3s, transform 0.3s;
 }
 .contact-link:hover {
