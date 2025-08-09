@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-gauche">
+        <!-- Sidebar avec navigation et filtres -->
+        <div class="sidebar-section">
             <div class="menu-sidebar">
                 <nav class="sidebar">
                     <ul>
@@ -21,24 +22,32 @@
                     </ul>
                 </nav>
             </div>
-            <h1>Liste des projets</h1>
-            <div class="vertical-scroll">
-                <aside class="project-list">
-                    <ul id="project-list">
-                        <!-- Liste des projets chargée dynamiquement -->
-                    </ul>
-                </aside>
+            
+            <div class="filters-section">
+                <h2>Filtrer par :</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn reset-btn active" onclick="resetFilters()">Tous</button>
+                    <button class="filter-btn" data-filter="stage">Stage</button>
+                    <button class="filter-btn" data-filter="perso">Perso</button>
+                    <button class="filter-btn" data-filter="team">Team</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="cms">CMS</button>
+                    
+                </div>
+            </div>
+            
+            <div class="project-count">
+                <p id="project-counter">5 projets</p>
             </div>
         </div>
 
-        <div class="col-droite">
-            <h1 id="project-name"></h1>
-            <h2 id="project-date"></h2>
-
-            <div class="project-details">
-                <div class="project-content" id="project-content">
-                    <!-- Contenu du projet chargé dynamiquement -->
-                </div>
+        <!-- Zone principale avec grille de projets -->
+        <div class="main-section">
+            <h1>Mes Projets</h1>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Les cartes de projets seront générées ici -->
             </div>
         </div>
     </div>
@@ -51,122 +60,217 @@
         </label>
         <span>Dark</span>
     </div>
+    
     <footer class="droits-reserves">
-        <p>&copy;2024 ROLLAND Baptiste. Tous droits réservés.</p>
+        <p>&copy;2025 ROLLAND Baptiste. Tous droits réservés.</p>
     </footer>
 
     <script src="js/switchTheme.js"></script>
+    <script src="js/particles.js"></script>
     
-    <!-- Données directement dans le fichier -->
     <script>
-        const data = {
+        // Données des projets
+        const projectsData = {
             "projects": [
                 {
-                    "id": 1,
-                    "name": "Création d'un site portfolio",
-                    "date": "2024-11-20",
-                    "description": "Site web pour présenter mes projets",
-                    "blocks": [
-                        { "type": "text", "content": "Ce projet de site a été conçu pour me présenter. <br> Il est réalisé en HTML, CSS et JS et est entièrement responsive. <br><br> Une version utilisant PHP est disponible mais non publiée sur github." },
-                        { "type": "image", "content": "project-portfolio/portfolio-index.png" },
-                        { "type": "image", "content": "project-portfolio/portfolio-project.png" },
-                        { "type": "image", "content": "project-portfolio/portfolio-about.png" },
-                        { "type": "image", "content": "project-portfolio/portfolio-contact.png" }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "Création d'une application de mini-jeux",
-                    "date": "2024-11-05",
-                    "description": "Application de mini-jeux ludique en Python",
-                    "blocks": [
-                        { "type": "text", "content": "Ce projet a été conçu dans le cadre d’une démarche personnelle visant à améliorer mes compétences en Python tout en développant un outil pratique et ludique." },
-                        { "type": "text", "content": "Le développement m’a demandé pour le moment environ 20 heures de travail, et l’application a été pensée pour être facilement extensible." },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-accueil.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-catalogue.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-devineNombre.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-calculMental.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-machineSous.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-jeuFrappe.png" },
-                        { "type": "image", "content": "project-miniJeux/miniJeux-tamagochi.png" }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Création d'un site web Talc Mexicain",
-                    "date": "2024-12-01",
-                    "description": "Site web réaliser de zéro pour le Talc Mexicain",
-                    "blocks": [
-                        { "type": "text", "content": "project-talcMexicain/index.png" },
-                        { "type": "text", "content": "project-talcMexicain/index.png" },
-                        { "type": "image", "content": "project-talcMexicain/index.png" }
-                    ]
+                    "id": 5,
+                    "name": "Projet Cocktail",
+                    "date": "2025-03-17",
+                    "categories": ["stage", "web"],
+                    "description": "Stage de fin d'étude : Remise en état du projet cocktail",
+                    "featured_image": "project-cocktail/Cocktail_Etude.jpeg"
                 },
                 {
                     "id": 4,
-                    "name": "Création d'un site web pour le C2RB",
+                    "name": "Site Portfolio Personnel",
+                    "date": "2024-11-20",
+                    "categories": ["perso", "web"],
+                    "description": "Site web responsive pour présenter mes projets et compétences",
+                    "featured_image": "project-portfolio/portfolio-index.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Application Mini-Jeux Python",
+                    "date": "2024-11-05",
+                    "categories": ["perso", "python"],
+                    "description": "Collection de mini-jeux développée en Python avec interface graphique",
+                    "featured_image": "project-miniJeux/miniJeux-accueil.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Site Web Talc Mexicain",
+                    "date": "2024-12-01",
+                    "categories": ["perso", "web", "team"],
+                    "description": "Site web personnalisé développé de zéro pour l'équipe du TalcMexicain",
+                    "featured_image": "project-talcMexicain/logo-talc.png"
+                },
+                {
+                    "id": 1,
+                    "name": "Site Web C2RB",
                     "date": "2024-02-01",
-                    "description": "Site web réaliser avec Wordpress pour le C2RB",
-                    "blocks": [
-                        { "type": "text", "content": "Présentation du site C2RB" },
-                        { "type": "text", "content": "coucou" },
-                        { "type": "image", "content": "AccueilGameCollection.png" }
-                    ]
+                    "categories": ["stage", "cms"],
+                    "description": "Stage de 2ème année : Site du C2RB développé avec WordPress",
+                    "featured_image": "project-c2rb/logo-c2rb.png"
                 }
             ]
         };
 
-        // Le reste du code reste le même
-        const urlParams = new URLSearchParams(window.location.search);
-        const selectedProjectId = parseInt(urlParams.get('project')) || 1;
+        // Variables globales
+        let activeFilters = [];
 
-        const projectList = document.getElementById('project-list');
-        const projectContent = document.getElementById('project-content');
-        const projectName = document.getElementById('project-name');
-        const projectDate = document.getElementById('project-date');
-
-        // Ajouter les projets à la liste
-        data.projects.forEach(project => {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `
-                <a href="projects.html?project=${project.id}">
-                    <p>${project.name}</p>
-                    <p>${project.date}</p>
-                    <p>${project.description}</p>
-                </a>
-            `;
-            projectList.appendChild(listItem);
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProjects();
+            initializeEventListeners();
+            updateProjectCounter();
         });
 
-        // Afficher le projet sélectionné
-        const selectedProject = data.projects.find(p => p.id === selectedProjectId);
-        if (selectedProject) {
-            projectName.textContent = selectedProject.name;
-            projectDate.textContent = selectedProject.date;
-            projectContent.innerHTML = ''; // Clear previous content
-
-            selectedProject.blocks.forEach(block => {
-                const blockElement = document.createElement('div');
-                blockElement.classList.add('content-block');
-                if (block.type === 'text') {
-                    blockElement.innerHTML = `<p>${block.content}</p>`;
-                } else if (block.type === 'image') {
-                    blockElement.innerHTML = `<img src="uploads/${block.content}" alt="Image">`;
-                }
-                projectContent.appendChild(blockElement);
+        // Rendu des projets
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            const filteredProjects = filterProjects();
+            
+            grid.innerHTML = '';
+            
+            if (filteredProjects.length === 0) {
+                grid.innerHTML = '<div class="no-results">Aucun projet trouvé</div>';
+                updateProjectCounter(0);
+                return;
+            }
+            
+            filteredProjects.forEach(project => {
+                const projectCard = createProjectCard(project);
+                grid.appendChild(projectCard);
             });
-        } else {
-            projectContent.innerHTML = '<p>Projet introuvable !</p>';
+            
+            updateProjectCounter(filteredProjects.length);
         }
 
-                // Cibler la colonne de défilement horizontal
-        const horizontalScroll = document.getElementById('project-content');
+        // Création d'une carte projet
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.setAttribute('data-categories', project.categories.join(','));
+            
+            card.innerHTML = `
+                <div class="card-image">
+                    <img src="uploads/${project.featured_image}" alt="${project.name}" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzk5OTk5OSI+SW1hZ2UgaW5kaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg=='">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">${project.name}</h3>
+                    <p class="card-date">${formatDate(project.date)}</p>
+                    <p class="card-description">${project.description}</p>
+                    <div class="card-categories">
+                        ${project.categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                    </div>
+                    <button class="view-details-btn" onclick="goToProject(${project.id})">Voir les détails</button>
+                </div>
+            `;
+            
+            return card;
+        }
 
-        // Ajouter un écouteur pour l'événement 'wheel'
-        horizontalScroll.addEventListener('wheel', (event) => {
-            event.preventDefault(); // Empêche le défilement vertical par défaut
-            horizontalScroll.scrollLeft += event.deltaY; // Défiler horizontalement
-        });
+        // Filtrage des projets avec support pour filtres multiples
+        function filterProjects() {
+            if (activeFilters.length === 0) {
+                return projectsData.projects;
+            }
+            
+            return projectsData.projects.filter(project => {
+                // Le projet doit avoir au moins une catégorie qui correspond à un filtre actif
+                return activeFilters.some(filter => project.categories.includes(filter));
+            });
+        }
+
+        // Gestion des filtres multiples
+        function toggleFilter(filterValue) {
+            const index = activeFilters.indexOf(filterValue);
+            
+            if (index === -1) {
+                // Ajouter le filtre
+                activeFilters.push(filterValue);
+            } else {
+                // Retirer le filtre
+                activeFilters.splice(index, 1);
+            }
+            
+            updateFilterButtons();
+            renderProjects();
+        }
+
+        // Réinitialiser tous les filtres
+        function resetFilters() {
+            activeFilters = [];
+            updateFilterButtons();
+            renderProjects();
+        }
+
+        // Mettre à jour l'apparence des boutons de filtre
+        function updateFilterButtons() {
+            const allButtons = document.querySelectorAll('.filter-btn');
+            const resetButton = document.querySelector('.reset-btn');
+            
+            // Réinitialiser tous les boutons
+            allButtons.forEach(btn => btn.classList.remove('active'));
+            
+            if (activeFilters.length === 0) {
+                // Si aucun filtre actif, activer le bouton "Tous"
+                resetButton.classList.add('active');
+            } else {
+                // Activer les boutons correspondant aux filtres actifs
+                activeFilters.forEach(filter => {
+                    const button = document.querySelector(`[data-filter="${filter}"]`);
+                    if (button) {
+                        button.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Mise à jour du compteur de projets
+        function updateProjectCounter(count = null) {
+            const counter = document.getElementById('project-counter');
+            const totalCount = count !== null ? count : filterProjects().length;
+            counter.textContent = `${totalCount} projet${totalCount > 1 ? 's' : ''}`;
+        }
+
+        // Navigation vers la page du projet
+        function goToProject(projectId) {
+            const projectPages = {
+                5: 'project/project-cocktail.html',
+                4: 'project/project-portfolio.html',
+                3: 'project/project-minijeux.html',
+                2: 'project/project-talcmexicain.html',
+                1: 'project/project-c2rb.html'
+            };
+            
+            const projectPage = projectPages[projectId];
+            if (projectPage) {
+                window.location.href = projectPage;
+            }
+        }
+
+        // Formatage des dates
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('fr-FR', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+
+        // Initialisation des event listeners
+        function initializeEventListeners() {
+            // Filtres (excluant le bouton reset)
+            document.querySelectorAll('.filter-btn:not(.reset-btn)').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filterValue = this.getAttribute('data-filter');
+                    toggleFilter(filterValue);
+                });
+            });
+        }
     </script>
 </body>
 </html>

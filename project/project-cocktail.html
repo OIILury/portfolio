@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <title>Projet Cocktail</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar avec navigation -->
+        <div class="sidebar-section">
+            <div class="menu-sidebar">
+                <nav class="sidebar">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../about.html">Info</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="back-button">
+                <a href="../projects.html" class="btn-back">← Retour aux projets</a>
+            </div>
+
+            <div class="content-block sommaire-block">
+                <h3>Sommaire</h3>
+                <nav class="sommaire-nav">
+                    <ul>
+                        <li><a href="#contexte" class="sommaire-link">Contexte du projet</a></li>
+                        <li><a href="#technologies" class="sommaire-link">Technologies utilisées</a></li>
+                        <li><a href="#objectifs" class="sommaire-link">Missions initiales</a></li>
+                        <li><a href="#solutions" class="sommaire-link">Solutions développées</a></li>
+                        <li><a href="#defis-techniques" class="sommaire-link">Défis techniques</a></li>
+                        <li><a href="#defis-organisationnels" class="sommaire-link">Défis organisationnels</a></li>
+                        <li><a href="#apports" class="sommaire-link">Apports personnels</a></li>
+                        <li><a href="#galerie" class="sommaire-link">Galerie d'images</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Zone principale avec détails du projet -->
+        <div class="main-section">
+            <div class="project-header">
+                <h1>Cocktail : Observatoire des tendances sur X et Bluesky</h1>
+                <p class="project-date">Stage de 4 mois - 2025</p>
+                <p class="project-description">Remise en état du projet cocktail</p>
+                
+                <div class="project-tags">
+                    <span class="tag">Stage</span>
+                    <span class="tag">Rust</span>
+                    <span class="tag">API</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Data Pipeline</span>
+                    <span class="tag">Web Scraping</span>
+                </div>
+            </div>
+            
+            <div class="project-content">
+                <!-- Introduction -->
+                <div class="content-block" id="contexte">
+                    <h2>Contexte du projet</h2>
+                    <p>
+                        J'ai contribué au développement de <strong>Cocktail</strong>, une plateforme web destinée à analyser 
+                        les tendances et discours émergents sur les réseaux sociaux X et Bluesky. Ce projet 
+                        s'inscrit dans un contexte de Recherche, co-financé par l'union européenne, avec pour objectif de 
+                        fournir aux chercheurs un outil d'analyse réactif et accessible.
+                    </p>
+                </div>
+
+                <!-- Technologies utilisées -->
+                <div class="content-block" id="technologies">
+                    <h2>Technologies utilisées</h2>
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h4>Backend & Collecte</h4>
+                            <ul>
+                                <li><strong>Rust</strong> - Développement et gestion du backend</li>
+                                <li><strong>API X/Twitter & Bluesky</strong> - Récupération des données</li>
+                                <li><strong>PostgreSQL</strong> - Stockage et traitement des données</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Outils & Méthodologie</h4>
+                            <ul>
+                                <li><strong>GitHub</strong> - Versionning</li>
+                                <li><strong>CSV Parsing</strong> - Importation de données</li>
+                                <li><strong>Machine virtuelle (WSL)</strong> - Environnement de test</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Missions initiales -->
+                <div class="content-block" id="objectifs">
+                    <h2>Missions initiales du stage</h2>
+                    <div class="mission-grid">
+                        <div class="mission-item">
+                            <h4>Réinstallation de la plateforme</h4>
+                            <p>
+                                <strong>Défi :</strong> Transférer la plateforme Cocktail depuis les serveurs d'ATOL CD 
+                                vers les serveurs de l'Université de Bourgogne. Nous avons récupéré le code via 
+                                des dépôts Git, travaillé en local pour comprendre et améliorer le système, 
+                                puis effectué le déploiement final.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Adaptation à la nouvelle API de X</h4>
+                            <p>
+                                <strong>Problème critique :</strong> La plateforme utilisait l'ancienne version de l'API X 
+                                (avant v2), empêchant toute collecte de données. Les nouvelles limitations nécessitaient 
+                                un compte chercheur professionnel, que nous avons dû attendre longtemps.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Nouvelles fonctionnalités</h4>
+                            <p>
+                                <strong>Évolution :</strong> Développement de fonctionnalités d'import/export CSV 
+                                (pour faciliter les tests et réutiliser des données passées) et création de nouveaux 
+                                systèmes de tri et visualisation suite aux échanges avec notre maître de stage.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Amélioration parcours utilisateur</h4>
+                            <p>
+                                <strong>Objectif :</strong> Rendre la plateforme suffisamment intuitive pour permettre 
+                                aux chercheurs d'exploiter les données après configuration des requêtes nécessaires, 
+                                sans intervention technique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="legacy-problem">
+                        <h4>Problématique de l'ancien système :</h4>
+                        <ul class="problem-list">
+                            <li>Outil de collecte Garuda (Scala) séparé et peu pratique</li>
+                            <li>Opérations manuelles en ligne de commande sur le serveur</li>
+                            <li>Arrêt/redémarrage des services pour chaque import</li>
+                            <li>Processus accessible uniquement aux développeurs experts</li>
+                            <li>Lenteur incompatible avec l'analyse en temps réel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solutions -->
+                <div class="content-block" id="solutions">
+                    <h2>Solutions développées</h2>
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <h4>Nouvel outil de collecte en Rust</h4>
+                            <p>
+                                Suppression complète de l'ancien outil Garuda (Scala) et développement d'un nouveau 
+                                module intégré directement dans Cocktail. Collecte désormais possible sur X et Bluesky 
+                                avec une interface utilisateur unifiée.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Documentation complète</h4>
+                            <p>
+                                Création d'une documentation exhaustive pour un projet initialement non documenté : 
+                                procédures d'installation, commentaires de code, schémas d'architecture, 
+                                et guides utilisateur.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Import/Export CSV</h4>
+                            <p>
+                                Développement de fonctionnalités permettant d'importer des données existantes 
+                                (pour tests et réutilisation) et d'exporter les résultats d'analyses 
+                                pour exploitation externe.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Nouvelles interfaces de tri</h4>
+                            <p>
+                                Création d'interfaces utilisateur pour le tri et la visualisation des données, 
+                                permettant aux chercheurs de manipuler facilement les résultats de collecte.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Tests robustes multi-plateforme</h4>
+                            <p>
+                                Validation approfondie des APIs X et Bluesky, tests avec fichiers CSV réels 
+                                pour gérer les cas limites et formats variés, environnement de test sécurisé.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Déploiement université</h4>
+                            <p>
+                                Installation réussie de la plateforme sur les serveurs de l'Université de Bourgogne, 
+                                avec configuration des droits d'accès et procédures de maintenance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Défis techniques -->
+                <div class="content-block" id="defis-techniques">
+                    <h2>Défis techniques relevés</h2>
+                    <div class="challenge-block">
+                        <h4>Montée en compétence autonome</h4>
+                        <p>
+                            J'ai <strong>appris Rust en autonomie</strong> pour remplacer une application Scala 
+                            existante, en analysant le code source et développant de nouveaux modules adaptés.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Reverse engineering</h4>
+                        <p>
+                            Face à l'absence totale de documentation, j'ai exploré méthodiquement le code source, 
+                            créé un environnement de test et documenté mes découvertes.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Validation d'APIs et migration</h4>
+                        <p>
+                            Tests approfondis de l'API Bluesky et adaptation critique de l'API X (migration v1 vers v2) 
+                            qui empêchait complètement la collecte. Compréhension des formats, limites de fréquence 
+                            et gestion des comptes professionnels requis.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Veille technique constante</h4>
+                        <p>
+                            Recherche intensive de bibliothèques Rust à jour et adaptées au projet, 
+                            exploration de solutions pour contourner les limitations d'API, 
+                            et évaluation de nouvelles technologies pour optimiser les performances.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Défis organisationnels -->
+                <div class="content-block" id="defis-organisationnels">
+                    <h2>Défis organisationnels</h2>
+                    <div class="challenge-block">
+                        <h4>Autonomie totale sans encadrement technique</h4>
+                        <p>
+                            Mon binôme et moi étions seuls dans un bureau sans personne pour nous aider 
+                            ou nous conseiller sur nos choix techniques. Nous avons dû développer notre 
+                            capacité d'autoformation et de prise de décision en équipe.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Navigation dans l'incertitude</h4>
+                        <p>
+                            Nous n'avions que les objectifs initiaux pour nous guider, sans cahier des charges 
+                            ni documentation. Les fonctionnalités à développer se précisaient au fur et à mesure 
+                            des échanges avec notre maître de stage, nous forçant à être flexibles.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Gestion de projet sur 4 mois</h4>
+                        <p>
+                            Planification autonome des tâches pour éviter de "s'emmêler les pinceaux" 
+                            et optimiser notre efficacité. Répartition claire du travail entre binômes 
+                            et établissement d'un plan d'action structuré.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Communication avec les non-initiés</h4>
+                        <p>
+                            Nécessité d'expliquer constamment les tenants et aboutissants de chaque problème 
+                            technique et solution à notre maître de stage, qui n'était pas expert en informatique. 
+                            Développement de notre capacité de vulgarisation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Apports personnels -->
+                <div class="content-block" id="apports">
+                    <h2>Ce que ce projet m'a apporté</h2>
+                    <div class="learning-grid">
+                        <div class="learning-item">
+                            <h4>Compétences techniques</h4>
+                            <ul>
+                                <li><strong>Maîtrise du Rust :</strong> Apprentissage autonome d'un nouveau langage pour remplacer une application Scala</li>
+                                <li><strong>Architecture web :</strong> Compréhension approfondie des applications web (backend, routes, autorisations d'accès)</li>
+                                <li><strong>Gestion d'APIs :</strong> Maîtrise des APIs X et Bluesky, pipelines de données en temps réel</li>
+                                <li><strong>Administration système :</strong> Déploiement sur serveurs universitaires, gestion des droits d'utilisation</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Soft skills et autonomie</h4>
+                            <ul>
+                                <li><strong>Autonomie renforcée :</strong> Recherche de solutions à des problèmes inconnus sans encadrement technique</li>
+                                <li><strong>Gestion de projet long terme :</strong> Planification sur 4 mois, répartition des tâches en binôme</li>
+                                <li><strong>Communication technique :</strong> Capacité à expliquer des concepts complexes aux non-initiés</li>
+                                <li><strong>Travail en équipe :</strong> Collaboration efficace et communication avec les supérieurs</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Méthodologie et rigueur</h4>
+                            <ul>
+                                <li><strong>Veille technique :</strong> Recherche et évaluation de bibliothèques et technologies adaptées</li>
+                                <li><strong>Reverse engineering :</strong> Analyse de code non documenté pour comprendre l'architecture existante</li>
+                                <li><strong>Rigueur de développement :</strong> Structuration du projet pour optimiser le développement</li>
+                                <li><strong>Adaptabilité :</strong> Navigation dans des objectifs flous et évolutifs</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Vision produit</h4>
+                            <ul>
+                                <li><strong>Orientation utilisateur final :</strong> Création d'outils simples et utiles pour les chercheurs</li>
+                                <li><strong>Analyse des besoins :</strong> Évolution du projet selon les retours utilisateurs</li>
+                                <li><strong>Documentation :</strong> Création de guides pour assurer la pérennité du projet</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="conclusion-text">
+                        Ce stage de 4 mois m'a permis de développer une approche méthodique et autonome face à des défis 
+                        techniques et organisationnels complexes. J'ai appris à naviguer dans l'incertitude tout en maintenant 
+                        une vision orientée utilisateur, créant des outils réellement utiles aux chercheurs. 
+                        L'expérience m'a particulièrement renforcé dans ma capacité à gérer un projet sur le long terme 
+                        et à communiquer efficacement avec des non-experts en informatique.
+                    </p>
+                </div>
+                
+                <!-- Galerie d'images -->
+                <div class="content-block" id="galerie">
+                    <h2>Galerie du projet</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active" data-slide="0">
+                                <img src="../uploads/project-cocktail/Cocktail_Accueil.jpeg" alt="Page d'accueil de Cocktail" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="1">
+                                <img src="../uploads/project-cocktail/Cocktail_Etude.jpeg" alt="Page d'étude des données" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="2">
+                                <img src="../uploads/project-cocktail/Cocktail_Nom-etude.png" alt="Configuration d'étude" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="3">
+                                <img src="../uploads/project-cocktail/Cocktail_CollectMpox.jpeg" alt="Collecte de données Mpox" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="4">
+                                <img src="../uploads/project-cocktail/Cocktail_Tweet.jpeg" alt="Visualisation des tweets" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="5">
+                                <img src="../uploads/project-cocktail/Cocktail_GraphTweet.jpeg" alt="Graphiques et analyses" onerror="this.style.display='none'">
+                            </div>
+                        </div>
+                        
+                        <!-- Contrôles du carrousel -->
+                        <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="carousel-btn carousel-next" onclick="changeSlide(1)">›</button>
+                        
+                        <!-- Indicateurs -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" onclick="currentSlide(0)"></button>
+                            <button class="indicator" onclick="currentSlide(1)"></button>
+                            <button class="indicator" onclick="currentSlide(2)"></button>
+                            <button class="indicator" onclick="currentSlide(3)"></button>
+                            <button class="indicator" onclick="currentSlide(4)"></button>
+                            <button class="indicator" onclick="currentSlide(5)"></button>
+                        </div>
+                        
+                        <!-- Légendes sous le carrousel -->
+                        <div class="carousel-captions">
+                            <div class="carousel-caption active" data-caption="0">
+                                <h4>Page d'accueil</h4>
+                                <p>Interface d'accueil de la plateforme Cocktail</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="1">
+                                <h4>Page de gestion des études</h4>
+                                <p>Dans cette interface nous pouvons visualiser les études que nous avons menée</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="2">
+                                <h4>Configuration d'étude</h4>
+                                <p>Nous allons faire une étude sur le Mpox</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="3">
+                                <h4>Collecte de données</h4>
+                                <p>Exemple de collecte sur le sujet Mpox</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="4">
+                                <h4>Tweets collectés</h4>
+                                <p>Interface de visualisation des messages récupérés</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="5">
+                                <h4>Graphiques d'analyse</h4>
+                                <p>Visualisations statistiques des données collectées</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switch">
+        <span>Light</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+    
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
+        ↑
+    </button>
+    
+    <footer class="droits-reserves">
+        <p>&copy;2025 ROLLAND Baptiste. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/switchTheme.js"></script>
+    <script>
+        // Navigation smooth vers les sections
+        document.querySelectorAll('.sommaire-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fonctionnalité du carrousel
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const captions = document.querySelectorAll('.carousel-caption');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Masquer toutes les slides, indicateurs et légendes
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            captions.forEach(caption => caption.classList.remove('active'));
+            
+            // Normaliser l'index
+            if (index >= totalSlides) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = totalSlides - 1;
+            else currentSlideIndex = index;
+            
+            // Afficher la slide, l'indicateur et la légende actifs
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+            captions[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-play du carrousel (optionnel)
+        setInterval(() => {
+            changeSlide(1);
+        }, 8000); // Change de slide toutes les 8 secondes
+
+        // Support tactile pour mobile
+        let startX = 0;
+        let endX = 0;
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+        carouselWrapper.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+
+        carouselWrapper.addEventListener('touchend', e => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50; // Distance minimale pour déclencher le swipe
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    changeSlide(1); // Swipe vers la gauche
+                } else {
+                    changeSlide(-1); // Swipe vers la droite
+                }
+            }
+        }
+
+        // Bouton retour en haut
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        // Afficher/masquer le bouton selon le scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html> 

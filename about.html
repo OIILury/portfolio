@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aboutStyle.css">    
-    <title>Info - Portfolio</title>
+    <title>À propos - Portfolio</title>
 </head>
 
 <body>
@@ -21,69 +21,229 @@
                 </ul>
             </nav>
         </div>
-        <div class="info">
-            <div class="about">
-                <div class="propos">
-                    <h1>À propos de moi</h1>
-                    <p>
-                        Je suis Baptiste Rolland, développeur en formation à l’IUT de Dijon. 
-                        Spécialisé en développement web, programmation embarquée et intelligence artificielle, 
-                        je suis passionné par les technologies modernes et les projets variés, 
-                        allant de la création de sites internet à la programmation d’objets connectés 
-                        en passant par la création d'application utilisant l'IA.
-                    </p>
+
+        <div class="main-content">
+            <!-- Section Profil et CV -->
+            <div class="profile-cv-section">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <div class="image-placeholder">
+                            <span>BR</span>
+                        </div>
+                    </div>
+                    <h1>Baptiste Rolland</h1>
+                    <p class="title">Développeur Full Stack & IA</p>
+                    <p class="subtitle">Passionné par les technologies modernes</p>
                 </div>
 
-                <div class="objectif">
-                    <h2>Mes objectifs</h2>
-                    <p>
-                        Développer mes compétences dans le domaine de l’intelligence artificielle et renforcer 
-                        mes expériences professionnelles pour relever de nouveaux défis.
-                    </p>
+                <div class="cv-download-card">
+                    <div class="cv-preview">
+                        <div class="cv-icon">📄</div>
+                        <h3>CV Baptiste Rolland</h3>
+                        <p>Téléchargez mon CV complet pour plus de détails sur mon parcours</p>
+                    </div>
+                    <a href="uploads/CV_ROLLAND.pdf" class="cv-button" target="_blank">
+                        Télécharger le CV
+                    </a>
                 </div>
             </div>
 
-            <div class="competence">
-                <h1>Mes compétences</h1>
-                <div class="skills">
-                    <div class="skills-category">
-                        <h2>Soft Skills 🌟</h2>
-                        <ul>
-                            <li>🌍 <strong>Curiosité</strong></li>
-                            <li>🤝 <strong>Sociabilité</strong></li>
-                            <li>✅ <strong>Responsabilité</strong></li>
-                            <li>🗣️ <strong>Communication orale</strong></li>
-                            <li>🔄 <strong>Flexibilité & Adaptabilité</strong></li>
-                        </ul>
+            <div class="content-sections">
+                <!-- Section À propos -->
+                <section class="about-section">
+                    <div class="section-header">
+                        <h2>Qui suis-je ?</h2>
+                        <div class="underline"></div>
                     </div>
-                
-                    <!-- Hard Skills -->
-                    <div class="skills-category">
-                        <h2>Hard Skills 💻</h2>
-                        <ul>
-                            <li>🐍 <strong>Python</strong></li>
-                            <li>🌐 <strong>HTML / CSS / JS / PHP</strong></li>
-                            <li>🗃️ <strong>SQL / Excel</strong></li>
-                            <li>🎮 <strong>C# / C++</strong></li>
-                            <li>🇬🇧 <strong>Anglais B2</strong></li>
-                        </ul>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Étudiants en formation au CNAM de Chalon-sûr-Saône, je me spécialise dans l'IA et le Big data. 
+                                Mon parcours m'a permis d'explorer des domaines variés, de la création de sites web à la 
+                                programmation d'objets connectés en passant par des applications utilisant l'IA.
+                            </p>
+                            <p>
+                                Passionné par l'innovation technologique, je cherche constamment à repousser mes limites 
+                                et à maîtriser de nouvelles technologies pour créer des solutions innovantes et utiles pour le
+                                futur.
+                            </p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Années d'expérience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projets réalisés</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Technologies maîtrisées</span>
+                            </div>
+                        </div>
                     </div>
-                
-                    <!-- Outils maîtrisés -->
-                    <div class="skills-category">
-                        <h2>Outils maîtrisés 🛠️</h2>
-                        <ul>
-                            <li>🖥️ <strong>Visual Studio Code</strong></li>
-                            <li>🌐 <strong>Git</strong></li>
-                            <li>📞 <strong>Microsoft Teams / Discord</strong></li>
-                            <li>🎨 <strong>Canva</strong></li>
-                            <li>📁 <strong>Suite Microsoft 365</strong></li>
-                        </ul>
+                </section>
+
+                <!-- Section Compétences -->
+                <section class="skills-section">
+                    <div class="section-header">
+                        <h2>Mes Compétences</h2>
+                        <div class="underline"></div>
                     </div>
-                </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Développement Web</h3>
+                            <div class="skill-bars">
+                                <div class="skill-bar">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">PHP</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Programmation</h3>
+                            <div class="skill-bars">
+                                <div class="skill-bar">
+                                    <span class="skill-name">Python</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="88"></div>
+                                    </div>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">C#</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="75"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">C++</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="70"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Outils & Technologies</h3>
+                            <div class="skill-bars">
+                                <div class="skill-bar">
+                                    <span class="skill-name">Git</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">SQL</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <span class="skill-name">Rust</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" data-width="75"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Timeline -->
+                <section class="timeline-section">
+                    <div class="section-header">
+                        <h2>Mon Parcours</h2>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2025 - Présent</h3>
+                                <h4>Formation au CNAM</h4>
+                                <p>CNAM de Chalon-sur-Saône - Spécialisation en IA et Big Data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2022 - 2025</h3>
+                                <h4>Formation Bachelor Universitaire de Technologie</h4>
+                                <p>IUT de Dijon - Parcours Réalisation d'applications : conception, développement, validation (Dijon)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2020 - 2022</h3>
+                                <h4>CPGE Technologie et Sciences de l'Ingénieur</h4>
+                                <p>Lycée Gustave Eiffel à Dijon</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Objectifs -->
+                <section class="goals-section">
+                    <div class="section-header">
+                        <h2>Mes Objectifs</h2>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="goals-grid">
+                        <div class="goal-card">
+                            <div class="goal-icon">🚀</div>
+                            <h3>Innovation</h3>
+                            <p>Développer des solutions innovantes en intelligence artificielle</p>
+                        </div>
+                        
+                        <div class="goal-card">
+                            <div class="goal-icon">🌍</div>
+                            <h3>Impact</h3>
+                            <p>Créer des technologies qui s'inscriront dans le futur</p>
+                        </div>
+                        
+                        <div class="goal-card">
+                            <div class="goal-icon">📈</div>
+                            <h3>Évolution</h3>
+                            <p>Continuer à apprendre et maîtriser de nouvelles technologies</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
+
     <div class="theme-switch">
         <span>Light</span>
         <label class="switch">
@@ -92,11 +252,14 @@
         </label>
         <span>Dark</span>
     </div>
+    
     <footer class="droits-reserves">
-        <p>&copy;2024 ROLLAND Baptiste. Tous droits réservés.</p>
+        <p>&copy;2025 ROLLAND Baptiste. Tous droits réservés.</p>
     </footer>
 
     <script src="js/switchTheme.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/aboutScript.js"></script>
 </body>
 </html>
 

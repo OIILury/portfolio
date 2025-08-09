@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <title>Projet Mini-Jeux</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar avec navigation -->
+        <div class="sidebar-section">
+            <div class="menu-sidebar">
+                <nav class="sidebar">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../about.html">Info</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="back-button">
+                <a href="../projects.html" class="btn-back">← Retour aux projets</a>
+            </div>
+
+            <div class="content-block sommaire-block">
+                <h3>Sommaire</h3>
+                <nav class="sommaire-nav">
+                    <ul>
+                        <li><a href="#contexte" class="sommaire-link">Vue d'ensemble</a></li>
+                        <li><a href="#technologies" class="sommaire-link">Technologies utilisées</a></li>
+                        <li><a href="#objectifs" class="sommaire-link">Architecture du projet</a></li>
+                        <li><a href="#solutions" class="sommaire-link">Fonctionnalités principales</a></li>
+                        <li><a href="#defis-techniques" class="sommaire-link">Défis techniques</a></li>
+                        <li><a href="#defis-organisationnels" class="sommaire-link">Points forts</a></li>
+                        <li><a href="#apports" class="sommaire-link">Apports et améliorations</a></li>
+                        <li><a href="#galerie" class="sommaire-link">Galerie du projet</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Zone principale avec détails du projet -->
+        <div class="main-section">
+            <div class="project-header">
+                <h1>Mini-Jeux : Collection de jeux interactifs en Python</h1>
+                <p class="project-date">Projet personnel - 2024</p>
+                <p class="project-description">Application Python avec interface graphique proposant 5 mini-jeux variés</p>
+                
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag">GUI</span>
+                    <span class="tag">Jeux</span>
+                    <span class="tag">PyInstaller</span>
+                    <span class="tag">POO</span>
+                </div>
+            </div>
+            
+            <div class="project-content">
+                <!-- Introduction -->
+                <div class="content-block" id="contexte">
+                    <h2>Vue d'ensemble</h2>
+                    <p>
+                        <strong>Mini-Jeux</strong> est une application Python développée avec Tkinter qui propose une 
+                        collection de 5 mini-jeux interactifs. L'application est conçue comme une plateforme de jeux 
+                        avec une interface graphique moderne et un système de gestion des scores intégré.
+                    </p>
+                    <p>
+                        Ce projet démontre ma maîtrise de la programmation orientée objet en Python, ainsi que ma 
+                        capacité à créer des interfaces utilisateur intuitives et des systèmes de persistance de données. 
+                        L'architecture modulaire permet une extension facile avec de nouveaux jeux.
+                    </p>
+                </div>
+
+                <!-- Technologies utilisées -->
+                <div class="content-block" id="technologies">
+                    <h2>Technologies utilisées</h2>
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h4>Développement & Interface</h4>
+                            <ul>
+                                <li><strong>Python 3.x</strong> - Langage principal du projet</li>
+                                <li><strong>Tkinter</strong> - Interface graphique native</li>
+                                <li><strong>Programmation Orientée Objet</strong> - Architecture modulaire</li>
+                                <li><strong>JSON</strong> - Persistance des données et scores</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Outils & Déploiement</h4>
+                            <ul>
+                                <li><strong>PyInstaller</strong> - Création d'exécutable autonome</li>
+                                <li><strong>Pathlib</strong> - Gestion des chemins de fichiers</li>
+                                <li><strong>Git</strong> - Gestion de versions</li>
+                                <li><strong>JSON</strong> - Sauvegarde des scores et configurations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="tech-explanation">
+                        L'application utilise exclusivement des technologies Python natives, garantissant une 
+                        portabilité maximale et une maintenance simplifiée. L'utilisation de Tkinter permet 
+                        une interface graphique performante sans dépendances externes.
+                    </p>
+                </div>
+
+                <!-- Architecture du projet -->
+                <div class="content-block" id="objectifs">
+                    <h2>Architecture du projet</h2>
+                    <div class="mission-grid">
+                        <div class="mission-item">
+                            <h4>Structure modulaire</h4>
+                            <p>
+                                <strong>Organisation :</strong> Le projet suit une architecture modulaire avec séparation 
+                                claire des responsabilités. Chaque jeu hérite d'une classe de base commune, permettant 
+                                une extension facile et une maintenance simplifiée.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Pattern de conception</h4>
+                            <p>
+                                <strong>Héritage et abstraction :</strong> Utilisation de la programmation orientée objet 
+                                avec une classe abstraite BaseGame définissant l'interface commune pour tous les jeux. 
+                                Cette approche garantit une cohérence dans l'interface utilisateur.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Système de gestion</h4>
+                            <p>
+                                <strong>Factory pattern :</strong> Implémentation d'un GameManager central qui utilise 
+                                le pattern Factory pour l'instanciation des jeux. Cette architecture permet une 
+                                gestion unifiée et une extensibilité maximale.
+                            </p>
+                        </div>
+                        <div class="mission-item">
+                            <h4>Persistance des données</h4>
+                            <p>
+                                <strong>Système robuste :</strong> Gestion des scores via JSON avec sauvegarde automatique, 
+                                tri des meilleurs scores et gestion d'erreurs robuste. Le système garantit 
+                                la persistance des données même en cas de fermeture inattendue.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="legacy-problem">
+                        <h4>Structure des fichiers :</h4>
+                        <ul class="problem-list">
+                            <li><strong>main.py</strong> - Point d'entrée principal de l'application</li>
+                            <li><strong>games/</strong> - Dossier contenant tous les jeux et le gestionnaire</li>
+                            <li><strong>utils/</strong> - Utilitaires (GUI manager, score manager)</li>
+                            <li><strong>assets/</strong> - Ressources (images, dictionnaire, icônes)</li>
+                            <li><strong>build_exe.py</strong> - Script pour créer l'exécutable avec PyInstaller</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fonctionnalités principales -->
+                <div class="content-block" id="solutions">
+                    <h2>Fonctionnalités principales</h2>
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <h4>Interface utilisateur moderne</h4>
+                            <p>
+                                Menu principal avec navigation intuitive, mode plein écran disponible et fenêtres modales 
+                                pour chaque jeu. Design professionnel et expérience utilisateur fluide.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Devine le Nombre</h4>
+                            <p>
+                                Jeu classique où l'utilisateur doit deviner un nombre entre 1 et 100 en 10 essais maximum. 
+                                Système d'indices "plus grand/plus petit" et score basé sur le nombre d'essais.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Calcul Mental</h4>
+                            <p>
+                                Jeu de rapidité mathématique avec deux modes : Timer (60 secondes) ou Vies (3 vies, 10 problèmes). 
+                                Opérations d'addition, soustraction et multiplication. Score basé sur la rapidité de réponse.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Machine à Sous</h4>
+                            <p>
+                                Jeu de hasard avec 3 rouleaux et 6 symboles différents. Système de paris variable 
+                                (10-100 crédits) et gains selon les combinaisons : identiques = jackpot, 
+                                2 identiques = petite victoire.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Jeu de Frappe</h4>
+                            <p>
+                                Test de vitesse de frappe utilisant un dictionnaire de 400k mots. 
+                                Deux modes : Normal (20 mots) ou Timer (60 secondes). Score basé sur la vitesse 
+                                et la précision de frappe.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <h4>Tamagotchi</h4>
+                            <p>
+                                Jeu d'élevage virtuel avec système de stats (HP, ATK, DEF, MANA, SPD, LUCK). 
+                                Fonctionnalités : nourrir, jouer, dormir, combats, collecte d'objets. 
+                                Sauvegarde automatique des données du pet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Défis techniques -->
+                <div class="content-block" id="defis-techniques">
+                    <h2>Défis techniques relevés</h2>
+                    <div class="challenge-block">
+                        <h4>Architecture orientée objet complexe</h4>
+                        <p>
+                            Conception d'une <strong>architecture modulaire robuste</strong> avec une classe abstraite 
+                            BaseGame définissant l'interface commune pour tous les jeux. Gestion de l'héritage 
+                            et de l'abstraction pour garantir une cohérence dans l'interface utilisateur.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Gestion des événements Tkinter</h4>
+                        <p>
+                            Maîtrise des événements graphiques complexes : gestion des clics, des timers, 
+                            des animations et des interactions utilisateur en temps réel. Synchronisation 
+                            entre l'interface et la logique métier de chaque jeu.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Système de persistance robuste</h4>
+                        <p>
+                            Développement d'un système de sauvegarde JSON fiable avec gestion d'erreurs, 
+                            tri automatique des scores et limitation à 10 meilleurs scores par jeu. 
+                            Gestion des cas d'erreur et de corruption de fichiers.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Optimisation des performances</h4>
+                        <p>
+                            Gestion efficace de la mémoire avec un dictionnaire de 400k mots pour le jeu de frappe, 
+                            optimisation des animations et des timers, et création d'un exécutable autonome 
+                            avec PyInstaller pour une distribution simplifiée.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Points forts -->
+                <div class="content-block" id="defis-organisationnels">
+                    <h2>Points forts du projet</h2>
+                    <div class="challenge-block">
+                        <h4>Code bien structuré et extensible</h4>
+                        <p>
+                            <strong>Architecture modulaire :</strong> Organisation claire avec séparation des responsabilités, 
+                            code réutilisable grâce à la classe de base et facilité d'ajout de nouveaux jeux. 
+                            Structure maintenable et évolutive.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Interface utilisateur professionnelle</h4>
+                        <p>
+                            <strong>Design cohérent :</strong> Interface moderne avec navigation intuitive, 
+                            feedback visuel pour les actions utilisateur et thème bleu professionnel. 
+                            Expérience utilisateur fluide et agréable.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Fonctionnalités avancées</h4>
+                        <p>
+                            <strong>Système robuste :</strong> Sauvegarde automatique des scores, gestion d'erreurs 
+                            complète, support du mode plein écran et exécutable autonome créé avec PyInstaller 
+                            pour une distribution simplifiée.
+                        </p>
+                    </div>
+                    <div class="challenge-block">
+                        <h4>Variété et qualité des jeux</h4>
+                        <p>
+                            <strong>5 jeux différents :</strong> Chaque jeu propose des mécaniques uniques avec 
+                            système de scores pour la motivation. Modes de jeu multiples (timer/vies) et 
+                            expérience de jeu complète et engageante.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Apports et améliorations -->
+                <div class="content-block" id="apports">
+                    <h2>Apports et améliorations possibles</h2>
+                    <div class="learning-grid">
+                        <div class="learning-item">
+                            <h4>Compétences techniques acquises</h4>
+                            <ul>
+                                <li><strong>Maîtrise de Python POO :</strong> Développement d'architectures modulaires avec héritage et abstraction</li>
+                                <li><strong>Interface graphique Tkinter :</strong> Création d'interfaces utilisateur complètes et interactives</li>
+                                <li><strong>Gestion des données :</strong> Système de persistance JSON avec gestion d'erreurs robuste</li>
+                                <li><strong>Déploiement :</strong> Création d'exécutables autonomes avec PyInstaller</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Soft skills développés</h4>
+                            <ul>
+                                <li><strong>Gestion de projet :</strong> Planification et organisation d'un projet complet de A à Z</li>
+                                <li><strong>Résolution de problèmes :</strong> Développement de solutions créatives pour les défis techniques</li>
+                                <li><strong>Attention aux détails :</strong> Création d'une expérience utilisateur cohérente et professionnelle</li>
+                                <li><strong>Autonomie :</strong> Développement d'un projet personnel sans encadrement</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Améliorations fonctionnelles</h4>
+                            <ul>
+                                <li><strong>Nouveaux jeux :</strong> Ajout de jeux supplémentaires pour enrichir l'expérience</li>
+                                <li><strong>Système de profils :</strong> Gestion de plusieurs utilisateurs avec statistiques détaillées</li>
+                                <li><strong>Mode multijoueur :</strong> Fonctionnalités de jeu en local pour plusieurs joueurs</li>
+                                <li><strong>Statistiques avancées :</strong> Graphiques et analyses détaillées des performances</li>
+                            </ul>
+                        </div>
+                        <div class="learning-item">
+                            <h4>Améliorations techniques</h4>
+                            <ul>
+                                <li><strong>Tests unitaires :</strong> Implémentation d'une suite de tests complète</li>
+                                <li><strong>Documentation API :</strong> Documentation technique détaillée du code</li>
+                                <li><strong>Optimisation :</strong> Amélioration des performances et de la gestion mémoire</li>
+                                <li><strong>Gestion des dépendances :</strong> Utilisation d'outils comme pip et requirements.txt</li>
+                            </ul>
+                        </div>
+                    </div>
+                                         <p class="conclusion-text">
+                         Ce projet démontre ma capacité à concevoir et développer une application complète en Python, 
+                         en utilisant les bonnes pratiques de programmation orientée objet et en créant une expérience 
+                         utilisateur de qualité. L'architecture modulaire permet une évolution continue et l'ajout 
+                         de nouvelles fonctionnalités, faisant de ce projet une base solide pour de futurs développements.
+                     </p>
+                     <p class="conclusion-text">
+                         <strong>Évolution continue :</strong> Ce projet sera amélioré au fur et à mesure de l'évolution 
+                         de mes compétences techniques. Chaque nouvel apprentissage, qu'il s'agisse de nouvelles 
+                         technologies, de patterns de conception ou de bonnes pratiques, sera intégré dans cette 
+                         application pour en faire un véritable laboratoire d'expérimentation et de démonstration 
+                         de mes progrès en développement.
+                     </p>
+                </div>
+                
+                <!-- Galerie d'images -->
+                <div class="content-block" id="galerie">
+                    <h2>Galerie du projet</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active" data-slide="0">
+                                <img src="../uploads/project-miniJeux/miniJeux-accueil.png" alt="Page d'accueil de Mini-Jeux" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="1">
+                                <img src="../uploads/project-miniJeux/miniJeux-catalogue.png" alt="Catalogue des jeux" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="2">
+                                <img src="../uploads/project-miniJeux/miniJeux-calculMental.png" alt="Jeu Calcul Mental" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="3">
+                                <img src="../uploads/project-miniJeux/miniJeux-devineNombre.png" alt="Jeu Devine le Nombre" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="4">
+                                <img src="../uploads/project-miniJeux/miniJeux-machineSous.png" alt="Jeu Machine à Sous" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="5">
+                                <img src="../uploads/project-miniJeux/miniJeux-jeuFrappe.png" alt="Jeu de Frappe" onerror="this.style.display='none'">
+                            </div>
+                            <div class="carousel-slide" data-slide="6">
+                                <img src="../uploads/project-miniJeux/miniJeux-tamagochi.png" alt="Jeu Tamagotchi" onerror="this.style.display='none'">
+                            </div>
+                        </div>
+                        
+                        <!-- Contrôles du carrousel -->
+                        <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="carousel-btn carousel-next" onclick="changeSlide(1)">›</button>
+                        
+                        <!-- Indicateurs -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" onclick="currentSlide(0)"></button>
+                            <button class="indicator" onclick="currentSlide(1)"></button>
+                            <button class="indicator" onclick="currentSlide(2)"></button>
+                            <button class="indicator" onclick="currentSlide(3)"></button>
+                            <button class="indicator" onclick="currentSlide(4)"></button>
+                            <button class="indicator" onclick="currentSlide(5)"></button>
+                            <button class="indicator" onclick="currentSlide(6)"></button>
+                        </div>
+                        
+                        <!-- Légendes sous le carrousel -->
+                        <div class="carousel-captions">
+                            <div class="carousel-caption active" data-caption="0">
+                                <h4>Page d'accueil</h4>
+                                <p>Interface principale de l'application avec navigation intuitive</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="1">
+                                <h4>Catalogue des jeux</h4>
+                                <p>Présentation des 5 jeux disponibles avec aperçu visuel</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="2">
+                                <h4>Calcul Mental</h4>
+                                <p>Jeu de rapidité mathématique avec timer et système de vies</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="3">
+                                <h4>Devine le Nombre</h4>
+                                <p>Jeu classique avec système d'indices et score basé sur les essais</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="4">
+                                <h4>Machine à Sous</h4>
+                                <p>Jeu de hasard avec système de paris et combinaisons gagnantes</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="5">
+                                <h4>Jeu de Frappe</h4>
+                                <p>Test de vitesse utilisant un dictionnaire de 400k mots</p>
+                            </div>
+                            <div class="carousel-caption" data-caption="6">
+                                <h4>Tamagotchi</h4>
+                                <p>Jeu d'élevage virtuel avec système de stats et sauvegarde</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switch">
+        <span>Light</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+    
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
+        ↑
+    </button>
+    
+    <footer class="droits-reserves">
+        <p>&copy;2025 ROLLAND Baptiste. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/switchTheme.js"></script>
+    <script>
+        // Navigation smooth vers les sections
+        document.querySelectorAll('.sommaire-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fonctionnalité du carrousel
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const captions = document.querySelectorAll('.carousel-caption');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Masquer toutes les slides, indicateurs et légendes
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            captions.forEach(caption => caption.classList.remove('active'));
+            
+            // Normaliser l'index
+            if (index >= totalSlides) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = totalSlides - 1;
+            else currentSlideIndex = index;
+            
+            // Afficher la slide, l'indicateur et la légende actifs
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+            captions[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-play du carrousel (optionnel)
+        setInterval(() => {
+            changeSlide(1);
+        }, 8000); // Change de slide toutes les 8 secondes
+
+        // Support tactile pour mobile
+        let startX = 0;
+        let endX = 0;
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+        carouselWrapper.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+
+        carouselWrapper.addEventListener('touchend', e => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50; // Distance minimale pour déclencher le swipe
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    changeSlide(1); // Swipe vers la gauche
+                } else {
+                    changeSlide(-1); // Swipe vers la droite
+                }
+            }
+        }
+
+        // Bouton retour en haut
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        // Afficher/masquer le bouton selon le scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html> 
