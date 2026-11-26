@@ -13,33 +13,43 @@
     <link rel="stylesheet" href="css/indexStyle.css">
     <title data-i18n="title_home">Portfolio - ROLLAND Baptiste</title>
 </head>
-<body>
+<body class="home">
     <div class="main-container">
         <header class="titre">
+            <span class="tech-path">~/portfolio</span>
             <h1>ROLLAND Baptiste</h1>
         </header>
         <nav class="sidebar">
             <ul>
-                <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
-                <li><a href="about.html" data-i18n="nav_about">Info</a></li>
-                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
-                <li><a href="uploads/CV_Stage_ROLLAND.pdf" target="_blank" data-i18n="nav_cv" data-i18n-attr="aria-label:nav_cv_aria">Voir mon CV</a></li>
+                <li><a href="projects.html"><span class="nav-num">01</span><span data-i18n="nav_projects">Projets</span></a></li>
+                <li><a href="about.html"><span class="nav-num">02</span><span data-i18n="nav_about">Info</span></a></li>
+                <li><a href="contact.html"><span class="nav-num">03</span><span data-i18n="nav_contact">Contact</span></a></li>
+                <li><a href="uploads/CV_Stage_ROLLAND.pdf" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:nav_cv_aria"><span class="nav-num">04</span><span data-i18n="nav_cv">CV (anglais)</span></a></li>
             </ul>
         </nav>
         <div class="cube-container">
             <div class="cube">
-                <div class="face front"></div>
-                <div class="face back"></div>
-                <div class="face left"></div>
-                <div class="face right"></div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
+                <div class="face front"><span data-i18n="cube_face_1">BIG DATA</span></div>
+                <div class="face back"><span data-i18n="cube_face_2">IA</span></div>
+                <div class="face left"><span data-i18n="cube_face_3">CLOUD</span></div>
+                <div class="face right"><span data-i18n="cube_face_4">ROBOTIQUE</span></div>
+                <div class="face top"><span data-i18n="cube_face_5">PYTHON</span></div>
+                <div class="face bottom"><span data-i18n="cube_face_6">SQL</span></div>
             </div>
         </div>
         <main>
-            <section class="bio">
-                <p data-i18n="home_intro">Étudiant en ingénierie informatique (Big Data & IA) au CNAM de Chalon-sur-Saône, je recherche actuellement un stage à l'international pour valider mon diplôme.</p>
-            </section>
+            <div class="home-content">
+                <section class="home-projects" id="home-projects">
+                    <h2 class="home-projects-title" data-i18n="home_recent">Projets récents</h2>
+                    <ul class="home-projects-list" id="home-projects-list"></ul>
+                    <a class="tech-link home-projects-all" href="projects.html" data-i18n="home_all_projects">Tous les projets →</a>
+                </section>
+                <p class="home-intro" data-i18n="home_intro">Étudiant en ingénierie informatique (Big Data & IA) au CNAM de Chalon-sur-Saône, je recherche actuellement un stage à l'international pour valider mon diplôme.</p>
+                <div class="info-badge">
+                    <span class="info-badge-dot" aria-hidden="true"></span>
+                    <span data-i18n="info_badge">Disponible · Stage à l'international · 1er juin – 31 juillet 2027</span>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -65,6 +75,6 @@
     <script src="js/i18n.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/cubeInteraction.js"></script>
+    <script src="js/home-projects.js"></script>
 </body>
 </html>
-

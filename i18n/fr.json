@@ -3,7 +3,7 @@
   "nav_projects": "Projets",
   "nav_about": "Info",
   "nav_contact": "Contact",
-  "nav_cv": "Voir mon CV",
+  "nav_cv": "CV (anglais)",
   "nav_cv_aria": "Voir mon CV",
   "footer_rights": "©2026 ROLLAND Baptiste. Tous droits réservés.",
   "home_intro": "Étudiant en ingénierie informatique (Big Data & IA) au CNAM de Chalon-sur-Saône, je recherche actuellement un stage à l'international pour valider mon diplôme.",
@@ -93,5 +93,13 @@
   "info_tl_5_title": "Lycée Gustave Eiffel (Dijon) · CPGE TSI",
   "info_tl_5_desc": "Technologie et sciences de l'ingénieur.",
   "info_skills_title": "Compétences",
-  "info_cv_btn": "Télécharger mon CV (anglais)"
+  "info_cv_btn": "Télécharger mon CV (anglais)",
+  "home_recent": "Projets récents",
+  "home_all_projects": "Tous les projets →",
+  "cube_face_1": "BIG DATA",
+  "cube_face_2": "IA",
+  "cube_face_3": "CLOUD",
+  "cube_face_4": "ROBOTIQUE",
+  "cube_face_5": "PYTHON",
+  "cube_face_6": "SQL"
 }
