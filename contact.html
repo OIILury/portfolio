@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contactStyle.css">
-    <title>Contact - Portfolio</title>
+    <title data-i18n="title_contact">Contact - Portfolio</title>
 </head>
 <body>
     <div class="container">
         <div class="menu-sidebar">
             <nav class="sidebar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">Info</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">Info</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <main class="contact">
-            <h1>Contactez-moi</h1>
+            <h1 data-i18n="contact_heading">Contactez-moi</h1>
             <div class="contact-me">
-                <a href="uploads/CV_ROLLAND.pdf" target="_blank" class="contact-link" aria-label="Voir mon CV">
-                    <img src="uploads/pdf-logo.png" alt="Icône pdf" class="contact-icon">
-                    <span>Mon CV</span>
+                <a href="uploads/CV_ROLLAND.pdf" target="_blank" class="contact-link" data-i18n-attr="aria-label:contact_cv_aria">
+                    <img src="uploads/pdf-logo.png" alt="Icône pdf" class="contact-icon" data-i18n-attr="alt:contact_cv_alt">
+                    <span data-i18n="contact_cv">Mon CV</span>
                 </a>
-                <a href="https://linkedin.com/in/barolland" target="_blank" class="contact-link" aria-label="Visiter mon profil LinkedIn">
-                    <img src="uploads/linkedin.png" alt="Icône LinkedIn" class="contact-icon">
-                    <span>Mon LinkedIn</span>
+                <a href="https://linkedin.com/in/barolland" target="_blank" class="contact-link" data-i18n-attr="aria-label:contact_linkedin_aria">
+                    <img src="uploads/linkedin.png" alt="Icône LinkedIn" class="contact-icon" data-i18n-attr="alt:contact_linkedin_alt">
+                    <span data-i18n="contact_linkedin">Mon LinkedIn</span>
                 </a>
-                <a href="mailto:brolland.b@gmail.com" class="contact-link" aria-label="Envoyer un e-mail">
-                    <img src="uploads/email.png" alt="Icône e-mail" class="contact-icon">
+                <a href="mailto:brolland.b@gmail.com" class="contact-link" data-i18n-attr="aria-label:contact_email_aria">
+                    <img src="uploads/email.png" alt="Icône e-mail" class="contact-icon" data-i18n-attr="alt:contact_email_alt">
                     <span>brolland.b@gmail.com</span>
                 </a>
             </div>
@@ -40,6 +45,12 @@
     </div>
 
     <div class="theme-switch">
+        <span>FR</span>
+        <label class="switch">
+            <input type="checkbox" id="lang-toggle" aria-label="FR / EN">
+            <span class="slider"></span>
+        </label>
+        <span>EN</span>
         <span>Light</span>
         <label class="switch">
             <input type="checkbox" id="theme-toggle">
@@ -48,10 +59,11 @@
         <span>Dark</span>
     </div>
     <footer class="droits-reserves">
-        <p>&copy;2026 ROLLAND Baptiste. Tous droits réservés.</p>
+        <p data-i18n="footer_rights">&copy;2026 ROLLAND Baptiste. Tous droits réservés.</p>
     </footer>
 
     <script src="js/switchTheme.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/particles.js"></script>
 </body>
 </html>
