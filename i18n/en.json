@@ -44,5 +44,10 @@
   "dom_web": "Web",
   "dom_iot": "IoT / Embedded",
   "dom_game": "Game",
-  "dom_tools": "Tools"
+  "dom_tools": "Tools",
+  "projects_title": "Projects & Work",
+  "projects_subtitle": "A selection of data, AI and software projects.",
+  "projects_view": "View project →",
+  "projects_all": "All",
+  "projects_empty": "No projects in this category."
 }

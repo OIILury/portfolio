@@ -44,5 +44,10 @@
   "dom_web": "Web",
   "dom_iot": "IoT / Embarqué",
   "dom_game": "Jeu",
-  "dom_tools": "Outils"
+  "dom_tools": "Outils",
+  "projects_title": "Projets & Réalisations",
+  "projects_subtitle": "Une sélection de projets en data, IA et développement.",
+  "projects_view": "Voir le projet →",
+  "projects_all": "Tous",
+  "projects_empty": "Aucun projet dans cette catégorie."
 }
