@@ -391,6 +391,90 @@
         "result": "",
         "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
       }
+    },
+    {
+      "slug": "tripbot",
+      "status": "draft",
+      "featured": false,
+      "start": null,
+      "end": null,
+      "context": "",
+      "domains": [],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "TripBot",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "TripBot",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "dataecho",
+      "status": "draft",
+      "featured": false,
+      "start": null,
+      "end": null,
+      "context": "",
+      "domains": [],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "DataEcho",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "DataEcho",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "proj-pointage",
+      "status": "draft",
+      "featured": false,
+      "start": null,
+      "end": null,
+      "context": "",
+      "domains": ["web"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Site web de pointage",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Time-tracking web app",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
     }
   ]
 }

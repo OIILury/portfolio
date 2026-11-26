@@ -187,9 +187,23 @@
                 return project.status === "published";
             });
 
-            const byStartAsc = published.slice().sort(function (a, b) {
-                const cmp = (a.start || "").localeCompare(b.start || "");
+            function compareStartNullLast(a, b, desc) {
+                const aHas = Boolean(a.start);
+                const bHas = Boolean(b.start);
+                if (aHas !== bHas) {
+                    return aHas ? -1 : 1;
+                }
+                if (!aHas && !bHas) {
+                    return a.slug.localeCompare(b.slug);
+                }
+                const cmp = desc
+                    ? b.start.localeCompare(a.start)
+                    : a.start.localeCompare(b.start);
                 return cmp !== 0 ? cmp : a.slug.localeCompare(b.slug);
+            }
+
+            const byStartAsc = published.slice().sort(function (a, b) {
+                return compareStartNullLast(a, b, false);
             });
             rankBySlug = {};
             byStartAsc.forEach(function (project, index) {
@@ -201,7 +215,7 @@
                 if (featCmp !== 0) {
                     return featCmp;
                 }
-                return (b.start || "").localeCompare(a.start || "");
+                return compareStartNullLast(a, b, true);
             });
 
             render();
