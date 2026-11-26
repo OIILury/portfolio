@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": "data",
+      "fr": "Data & Big Data",
+      "en": "Data & Big Data",
+      "skills": ["SQL", "Power Query", "Power Pivot", "Excel", "Hadoop", "Spark", "Parquet", "MongoDB"]
+    },
+    {
+      "id": "ia",
+      "fr": "IA",
+      "en": "AI",
+      "skills": ["FastAPI", "Ollama", "RAG", "OCR"]
+    },
+    {
+      "id": "cloud",
+      "fr": "Cloud & DevOps",
+      "en": "Cloud & DevOps",
+      "skills": ["Docker", "Kubernetes", "AWS S3", "Git"]
+    },
+    {
+      "id": "dev",
+      "fr": "Développement",
+      "en": "Development",
+      "skills": ["Python", "Java", "R", "Rust", "HTML", "CSS", "JavaScript"]
+    }
+  ]
+}
