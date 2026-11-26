@@ -174,9 +174,10 @@ body.home .info-badge-dot {
 body.home .cube-container {
     --cube-size: 150px;
     position: absolute;
-    top: 40px;
-    right: 56px;
+    top: 8%;
+    right: 9%;
     transform: none;
+    transform-style: preserve-3d;
     width: var(--cube-size);
     height: var(--cube-size);
     perspective: 500px;
@@ -302,15 +303,37 @@ body.home .cube .bottom { transform: rotateX(-90deg) translateZ(calc(var(--cube-
         align-items: flex-end;
     }
 
+    body.home .home-projects-title {
+        font-size: 0.85rem;
+    }
+
+    body.home .home-project-link {
+        font-size: clamp(0.95rem, 0.85rem + 0.2vw, 1.1rem);
+    }
+
+    body.home .home-projects-all {
+        font-size: 0.95rem;
+    }
+
+    body.home .home-intro {
+        font-size: clamp(1.1rem, 1rem + 0.3vw, 1.35rem);
+        line-height: 1.55;
+    }
+
+    body.home .info-badge {
+        font-size: 0.9rem;
+    }
+
     body.home .cube-container {
         --cube-size: 150px;
         position: absolute;
-        top: 40px;
-        right: 56px;
+        top: 8%;
+        right: 9%;
         width: var(--cube-size);
         height: var(--cube-size);
         perspective: 500px;
         transform: none;
+        transform-style: preserve-3d;
         z-index: 1;
     }
 }
