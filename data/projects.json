@@ -1,0 +1,396 @@
+{
+  "projects": [
+    {
+      "slug": "cocktail-stage",
+      "status": "published",
+      "featured": false,
+      "start": "2025-03",
+      "end": null,
+      "context": "internship",
+      "domains": ["web"],
+      "stack": [],
+      "confidential": false,
+      "cover": "uploads/project-cocktail/Cocktail_Etude.jpeg",
+      "legacy_page": "project/project-cocktail.html",
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Projet Cocktail",
+        "tagline": "Stage de fin d'études : remise en état du projet Cocktail",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Projet Cocktail",
+        "tagline": "Final-year internship: restoring the Cocktail project",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "portfolio",
+      "status": "published",
+      "featured": false,
+      "start": "2024-11",
+      "end": null,
+      "context": "personal",
+      "domains": ["web"],
+      "stack": [],
+      "confidential": false,
+      "cover": "uploads/project-portfolio/portfolio-index.png",
+      "legacy_page": "project/project-portfolio.html",
+      "links": { "repo": "https://github.com/OIILury/portfolio", "demo": null, "doc": null },
+      "fr": {
+        "title": "Portfolio personnel",
+        "tagline": "Site web responsive pour présenter mes projets et compétences",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Personal portfolio",
+        "tagline": "Responsive website showcasing my projects and skills",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "mini-jeux",
+      "status": "published",
+      "featured": false,
+      "start": "2024-11",
+      "end": null,
+      "context": "personal",
+      "domains": ["game"],
+      "stack": ["Python"],
+      "confidential": false,
+      "cover": "uploads/project-miniJeux/miniJeux-accueil.png",
+      "legacy_page": "project/project-minijeux.html",
+      "links": { "repo": "https://github.com/OIILury/Mini-jeux", "demo": null, "doc": null },
+      "fr": {
+        "title": "Application Mini-Jeux Python",
+        "tagline": "Collection de mini-jeux en Python avec interface graphique",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Python Mini-Games App",
+        "tagline": "Python mini-games collection with a graphical interface",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "talc-mexicain",
+      "status": "draft",
+      "featured": false,
+      "start": "2024-12",
+      "end": null,
+      "context": "team",
+      "domains": ["web"],
+      "stack": [],
+      "confidential": false,
+      "cover": "uploads/project-talcmexicain/logo-talc.png",
+      "legacy_page": "project/project-talcmexicain.html",
+      "links": { "repo": "https://github.com/OIILury/TalcMexicains", "demo": null, "doc": null },
+      "fr": {
+        "title": "Site Web Talc Mexicain",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Site Web Talc Mexicain",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "c2rb",
+      "status": "draft",
+      "featured": false,
+      "start": "2024-02",
+      "end": null,
+      "context": "internship",
+      "domains": ["web"],
+      "stack": ["WordPress"],
+      "confidential": false,
+      "cover": "uploads/project-c2rb/logo-c2rb.png",
+      "legacy_page": "project/project-c2rb.html",
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Site Web C2RB",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Site Web C2RB",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "aqua-verify",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["ia", "web"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": "https://github.com/OIILury/Aqua-Verify", "demo": null, "doc": null },
+      "fr": {
+        "title": "Aqua Verify",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Aqua Verify",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "ai-microservice",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["ia"],
+      "stack": ["Python", "FastAPI", "Ollama"],
+      "confidential": true,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": "https://github.com/OIILury/ai-microservice", "demo": null, "doc": null },
+      "fr": {
+        "title": "AI Microservice",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "AI Microservice",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "reporting-erp",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["data"],
+      "stack": [],
+      "confidential": true,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Reporting ERP automatisé",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Automated ERP reporting",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "convertisseur-paie",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["tools"],
+      "stack": ["Python"],
+      "confidential": true,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Convertisseur Excel vers export paie",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Excel to payroll export converter",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "esp32-serveur-web",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["iot"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Serveur web sur ESP32",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "ESP32 web server",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "maurice",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": [],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Maurice",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Maurice",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "bigdata-hadoop-spark",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "school",
+      "domains": ["data"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Big Data : Hadoop, Spark, Parquet",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Big Data: Hadoop, Spark, Parquet",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "cloud-k8s-mongo-s3",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "school",
+      "domains": ["cloud"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Cloud : Kubernetes, MongoDB, S3",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "Cloud: Kubernetes, MongoDB, S3",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    },
+    {
+      "slug": "minecraft-molecules-3d",
+      "status": "draft",
+      "featured": false,
+      "start": "",
+      "end": null,
+      "context": "",
+      "domains": ["game"],
+      "stack": [],
+      "confidential": false,
+      "cover": null,
+      "legacy_page": null,
+      "links": { "repo": null, "demo": null, "doc": null },
+      "fr": {
+        "title": "Molécules 3D dans Minecraft",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      },
+      "en": {
+        "title": "3D molecules in Minecraft",
+        "tagline": "",
+        "role": "",
+        "result": "",
+        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+      }
+    }
+  ]
+}
