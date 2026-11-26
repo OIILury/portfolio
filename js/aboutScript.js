@@ -17,38 +17,6 @@ function animateProgressBars() {
     });
 }
 
-// Animation des statistiques
-function animateStats() {
-    const stats = document.querySelectorAll('.stat-number');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const stat = entry.target;
-                const finalValue = stat.textContent;
-                const isPlus = finalValue.includes('+');
-                const numericValue = parseInt(finalValue.replace('+', ''));
-                
-                let currentValue = 0;
-                const increment = numericValue / 50;
-                
-                const timer = setInterval(() => {
-                    currentValue += increment;
-                    if (currentValue >= numericValue) {
-                        currentValue = numericValue;
-                        clearInterval(timer);
-                    }
-                    stat.textContent = Math.floor(currentValue) + (isPlus ? '+' : '');
-                }, 30);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    stats.forEach(stat => {
-        observer.observe(stat);
-    });
-}
-
 // Animation des cartes au scroll
 function animateCards() {
     const cards = document.querySelectorAll('.skill-category, .goal-card, .timeline-content');
@@ -184,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attendre un peu avant de démarrer les animations
     setTimeout(() => {
         animateProgressBars();
-        animateStats();
         animateCards();
         animateIcons();
         animateSections();
