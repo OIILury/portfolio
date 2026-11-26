@@ -419,3 +419,56 @@ a.tech-card .tech-btn {
     gap: 0.25rem;
   }
 }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-tile {
+  max-width: none;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-tile:hover,
+.contact-tile:focus-visible {
+  border-color: var(--accent-deco);
+  transform: translateY(-2px);
+}
+
+.contact-tile-body {
+  gap: 0.75rem;
+}
+
+.contact-icon,
+.contact-icon-svg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  color: var(--text);
+}
+
+body.dark-mode .contact-icon {
+  filter: invert(1);
+}
+
+.contact-value {
+  font: 500 0.95rem/1.4 var(--font-mono);
+  color: var(--text);
+  word-break: break-word;
+}
+
+.contact-help {
+  font: 400 0.85rem/1.4 var(--font-body);
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

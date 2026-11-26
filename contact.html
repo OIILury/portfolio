@@ -9,38 +9,74 @@
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contactStyle.css">
+    <link rel="stylesheet" href="css/layout.css">
     <title data-i18n="title_contact">Contact - Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <div class="menu-sidebar">
-            <nav class="sidebar">
-                <ul>
-                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
-                    <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
-                    <li><a href="about.html" data-i18n="nav_about">Info</a></li>
-                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <main class="contact">
-            <h1 data-i18n="contact_heading">Contactez-moi</h1>
-            <div class="contact-me">
-                <a href="uploads/CV_Stage_ROLLAND.pdf" target="_blank" class="contact-link" data-i18n-attr="aria-label:contact_cv_aria">
-                    <img src="uploads/pdf-logo.png" alt="Icône pdf" class="contact-icon" data-i18n-attr="alt:contact_cv_alt">
-                    <span data-i18n="contact_cv">Mon CV</span>
+    <div class="site-layout">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="about.html" data-i18n="nav_about">Info</a></li>
+                <li><a href="contact.html" class="active" aria-current="page" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="site-main">
+            <header class="tech-header">
+                <span class="tech-path">~/portfolio/contact</span>
+                <h1 class="tech-title" data-i18n="contact_title">Contact</h1>
+                <p class="tech-sub" data-i18n="contact_sub">Disponible pour un stage à l'international du 1er juin au 31 juillet 2027. Le moyen le plus rapide de me joindre : par e-mail.</p>
+            </header>
+
+            <section class="contact-grid" aria-label="Moyens de contact">
+                <a href="mailto:brolland.b@gmail.com" class="tech-card contact-tile" data-i18n-attr="aria-label:contact_email_aria">
+                    <div class="tech-card-bar">
+                        <span data-i18n="contact_bar_email">01 · EMAIL</span>
+                    </div>
+                    <div class="tech-card-body contact-tile-body">
+                        <img src="uploads/email.png" alt="Icône e-mail" class="contact-icon" data-i18n-attr="alt:contact_email_alt">
+                        <span class="contact-value">brolland.b@gmail.com</span>
+                        <span class="contact-help" data-i18n="contact_help_email">Écrire un message →</span>
+                    </div>
                 </a>
-                <a href="https://linkedin.com/in/barolland" target="_blank" class="contact-link" data-i18n-attr="aria-label:contact_linkedin_aria">
-                    <img src="uploads/linkedin.png" alt="Icône LinkedIn" class="contact-icon" data-i18n-attr="alt:contact_linkedin_alt">
-                    <span data-i18n="contact_linkedin">Mon LinkedIn</span>
+
+                <a href="https://www.linkedin.com/in/barolland" target="_blank" rel="noopener noreferrer" class="tech-card contact-tile" data-i18n-attr="aria-label:contact_linkedin_aria">
+                    <div class="tech-card-bar">
+                        <span data-i18n="contact_bar_linkedin">02 · LINKEDIN</span>
+                    </div>
+                    <div class="tech-card-body contact-tile-body">
+                        <img src="uploads/linkedin.png" alt="Icône LinkedIn" class="contact-icon" data-i18n-attr="alt:contact_linkedin_alt">
+                        <span class="contact-value">linkedin.com/in/barolland</span>
+                        <span class="contact-help" data-i18n="contact_help_linkedin">Voir mon profil ↗</span>
+                    </div>
                 </a>
-                <a href="mailto:brolland.b@gmail.com" class="contact-link" data-i18n-attr="aria-label:contact_email_aria">
-                    <img src="uploads/email.png" alt="Icône e-mail" class="contact-icon" data-i18n-attr="alt:contact_email_alt">
-                    <span>brolland.b@gmail.com</span>
+
+                <a href="https://github.com/OIILury" target="_blank" rel="noopener noreferrer" class="tech-card contact-tile" data-i18n-attr="aria-label:contact_github_aria">
+                    <div class="tech-card-bar">
+                        <span data-i18n="contact_bar_github">03 · GITHUB</span>
+                    </div>
+                    <div class="tech-card-body contact-tile-body">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
+                        </svg>
+                        <span class="contact-value">github.com/OIILury</span>
+                        <span class="contact-help" data-i18n="contact_help_github">Voir mes dépôts ↗</span>
+                    </div>
                 </a>
-            </div>
+
+                <a href="uploads/CV_Stage_ROLLAND.pdf" target="_blank" rel="noopener noreferrer" class="tech-card contact-tile" data-i18n-attr="aria-label:contact_cv_aria">
+                    <div class="tech-card-bar">
+                        <span data-i18n="contact_bar_cv">04 · CV</span>
+                    </div>
+                    <div class="tech-card-body contact-tile-body">
+                        <img src="uploads/pdf-logo.png" alt="Icône pdf" class="contact-icon" data-i18n-attr="alt:contact_cv_alt">
+                        <span class="contact-value">CV_Stage_ROLLAND.pdf</span>
+                        <span class="contact-help" data-i18n="contact_help_cv">Télécharger le CV (anglais, PDF) →</span>
+                    </div>
+                </a>
+            </section>
         </main>
     </div>
 
