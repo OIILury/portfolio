@@ -166,11 +166,6 @@ body.light-mode .timeline-content {
     border-color: rgba(222, 184, 135, 0.3);
 }
 
-body.light-mode .stat-item {
-    background: rgba(222, 184, 135, 0.1);
-    border-color: #deb887;
-}
-
 body.light-mode .profile-card {
     background: rgba(255, 255, 255, 0.9);
 }
@@ -184,10 +179,6 @@ body.light-mode .goal-card h3,
 body.light-mode .timeline-content h3,
 body.light-mode .timeline-content h4,
 body.light-mode .cv-preview h3 {
-    color: #deb887;
-}
-
-body.light-mode .stat-number {
     color: #deb887;
 }
 
@@ -317,11 +308,6 @@ body.dark-mode .timeline-content {
     border-color: rgba(222, 184, 135, 0.3);
 }
 
-body.dark-mode .stat-item {
-    background: rgba(222, 184, 135, 0.1);
-    border-color: #deb887;
-}
-
 body.dark-mode .profile-card {
     background: rgba(255, 255, 255, 0.05);
 }
@@ -338,10 +324,6 @@ body.dark-mode .cv-preview h3 {
     color: #deb887;
 }
 
-body.dark-mode .stat-number {
-    color: #deb887;
-}
-
 body.dark-mode .skill-percentage {
     color: #deb887;
 }
@@ -351,7 +333,6 @@ body.dark-mode .cv-button {
 }
 
 body.dark-mode .profile-card .subtitle,
-body.dark-mode .stat-label,
 body.dark-mode .skill-name,
 body.dark-mode .timeline-content p,
 body.dark-mode .goal-card p,

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Project details: context, approach, architecture, challenges and outcomes.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projet - Portfolio">
+    <meta property="og:description" content="Project details: context, approach, architecture, challenges and outcomes.">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>Projet - Portfolio</title>
+</head>
+<body>
+    <div class="site-layout">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="projects.html" class="active" aria-current="page" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="about.html" data-i18n="nav_about">Info</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="site-main" id="project-main"></main>
+    </div>
+
+    <div class="theme-switch">
+        <span>FR</span>
+        <label class="switch">
+            <input type="checkbox" id="lang-toggle" aria-label="FR / EN">
+            <span class="slider"></span>
+        </label>
+        <span>EN</span>
+        <span>Light</span>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle" aria-label="Light / Dark">
+            <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+    <footer class="droits-reserves">
+        <p data-i18n="footer_rights">&copy;2026 ROLLAND Baptiste. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/switchTheme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>

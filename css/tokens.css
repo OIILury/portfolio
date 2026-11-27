@@ -1,0 +1,30 @@
+:root {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius: 4px;
+}
+
+body, body.dark-mode {
+  --bg: #0F1113;
+  --surface: #16191D;
+  --surface-alt: #1E2329;
+  --text: #ECEFF4;
+  --text-muted: #96A0AD;
+  --accent: #DEB887;
+  --accent-deco: #DEB887;
+  --accent-contrast: #0F1113;
+  --border: #282E36;
+}
+
+body.light-mode {
+  --bg: #F5F6F7;
+  --surface: #FFFFFF;
+  --surface-alt: #ECEFF2;
+  --text: #111315;
+  --text-muted: #4D535B;
+  --accent: #7A4E1D;
+  --accent-deco: #DEB887;
+  --accent-contrast: #111315;
+  --border: #D5D9DF;
+}

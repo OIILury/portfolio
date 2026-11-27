@@ -3,67 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Portfolio of Baptiste Rolland, software and data engineering apprentice (AI &amp; Big Data), looking for an international internship in June–July 2027.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio - ROLLAND Baptiste">
+    <meta property="og:description" content="Portfolio of Baptiste Rolland, software and data engineering apprentice (AI &amp; Big Data), looking for an international internship in June–July 2027.">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/indexStyle.css">
-    <title>Portfolio - ROLLAND Baptiste</title>
+    <title data-i18n="title_home">Portfolio - ROLLAND Baptiste</title>
 </head>
-<body>
+<body class="home">
     <div class="main-container">
         <header class="titre">
+            <span class="tech-path">~/portfolio</span>
             <h1>ROLLAND Baptiste</h1>
-            <!--<h2><a href="https://talcmexicain.github.io/TalcMexicainWebSite/">Talc Mexicain Member</a></h2>-->
-            <!--<h2>Adversus solem ne loquitor</h2>-->
         </header>
         <nav class="sidebar">
             <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">Info</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="uploads/CV_ROLLAND.pdf" target="_blank" aria-label="Voir mon CV">Voir mon CV</a></li>
+                <li><a href="projects.html"><span class="nav-num">01</span><span data-i18n="nav_projects">Projets</span></a></li>
+                <li><a href="about.html"><span class="nav-num">02</span><span data-i18n="nav_about">Info</span></a></li>
+                <li><a href="contact.html"><span class="nav-num">03</span><span data-i18n="nav_contact">Contact</span></a></li>
+                <li><a href="uploads/CV_Stage_ROLLAND.pdf" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:nav_cv_aria"><span class="nav-num">04</span><span data-i18n="nav_cv">CV (anglais)</span></a></li>
             </ul>
         </nav>
         <div class="cube-container">
             <div class="cube">
-                <div class="face front"><!--<br>I<br><br>Per me si va nella città dolente,--></div>
-                <div class="face back"><!--<br>II<br><br>per me si va ne l'etterno dolore,--></div>
-                <div class="face left"><!--<br>III<br><br>per me si va tra la perduta gente.--></div>
-                <div class="face right"><!--<br>IV<br><br>Dinanzi a me non fuor cose create--></div>
-                <div class="face top"><!--<br>V<br><br>se non etterne, e io etterno duro.--></div>
-                <div class="face bottom"><!--<br>VI<br><br>Lasciate ogne speranza, voi ch'intrate.--></div>
+                <div class="face front"><span data-i18n="cube_face_1">BIG DATA</span></div>
+                <div class="face back"><span data-i18n="cube_face_2">IA</span></div>
+                <div class="face left"><span data-i18n="cube_face_3">CLOUD</span></div>
+                <div class="face right"><span data-i18n="cube_face_4">ROBOTIQUE</span></div>
+                <div class="face top"><span data-i18n="cube_face_5">PYTHON</span></div>
+                <div class="face bottom"><span data-i18n="cube_face_6">SQL</span></div>
             </div>
         </div>
         <main>
-            <section class="bio">
-                <p class="text-original">
-                    Étudiant en ingénierie informatique (Big Data & IA) 
-                    au CNAM de Chalon-sur-Saône, je recherche une 
-                    alternance dans le domaine de l’IA et/ou Big Data.
-                </p>
-                <p class="text-translated">
-                    Computer Engineering student (Big Data & AI) at 
-                    CNAM in Chalon-sur-Saône, I am looking for a work-study 
-                    opportunity in the field of AI and/or Big Data.
-                </p>
-            </section>
+            <div class="home-content">
+                <section class="home-projects" id="home-projects">
+                    <h2 class="home-projects-title" data-i18n="home_recent">Projets récents</h2>
+                    <ul class="home-projects-list" id="home-projects-list"></ul>
+                    <a class="tech-link home-projects-all" href="projects.html" data-i18n="home_all_projects">Tous les projets →</a>
+                </section>
+                <p class="home-intro" data-i18n="home_intro">Étudiant en ingénierie informatique (Big Data & IA) au CNAM de Chalon-sur-Saône, je recherche actuellement un stage à l'international pour valider mon diplôme.</p>
+                <div class="info-badge">
+                    <span class="info-badge-dot" aria-hidden="true"></span>
+                    <span data-i18n="info_badge">Disponible · Stage à l'international · 1er juin – 31 juillet 2027</span>
+                </div>
+            </div>
         </main>
     </div>
 
     <div class="theme-switch">
+        <span>FR</span>
+        <label class="switch">
+            <input type="checkbox" id="lang-toggle" aria-label="FR / EN">
+            <span class="slider"></span>
+        </label>
+        <span>EN</span>
         <span>Light</span>
         <label class="switch">
-            <input type="checkbox" id="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Light / Dark">
             <span class="slider"></span>
         </label>
         <span>Dark</span>
     </div>
     <footer class="droits-reserves">
-        <p>&copy;2025 ROLLAND Baptiste. Tous droits réservés.</p>
+        <p data-i18n="footer_rights">&copy;2026 ROLLAND Baptiste. Tous droits réservés.</p>
     </footer>
 
     <script src="js/switchTheme.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/cubeInteraction.js"></script>
+    <script src="js/home-projects.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "id": "languages",
+      "fr": "Langages",
+      "en": "Languages",
+      "skills": ["Python", "SQL", "Rust", "R", "C#", "JavaScript", "PHP", "VBA", "M (Power Query)", "SARL"]
+    },
+    {
+      "id": "data",
+      "fr": "Data & BI",
+      "en": "Data & BI",
+      "skills": ["PostgreSQL", "MySQL", "ETL", "Power BI", "Power Query", "Power Pivot", "Excel", "Hadoop", "Spark", "Parquet", "MongoDB"]
+    },
+    {
+      "id": "ia",
+      "fr": "IA & NLP",
+      "en": "AI & NLP",
+      "skills": ["Ollama", "ChromaDB", "RAG", "NLP", "OCR", "MediaPipe"]
+    },
+    {
+      "id": "cloud",
+      "fr": "Cloud & DevOps",
+      "en": "Cloud & DevOps",
+      "skills": ["Docker", "Kubernetes", "AWS S3"]
+    },
+    {
+      "id": "robotics",
+      "fr": "Robotique & embarqué",
+      "en": "Robotics & embedded",
+      "skills": ["ROS 2", "Nav2", "Jetson Orin NX", "Raspberry Pi", "ESP32"]
+    },
+    {
+      "id": "tools",
+      "fr": "Frameworks & outils",
+      "en": "Frameworks & tools",
+      "skills": ["FastAPI", "Streamlit", "Git"]
+    }
+  ]
+}
