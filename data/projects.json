@@ -5,27 +5,85 @@
       "status": "published",
       "featured": false,
       "start": "2025-03",
-      "end": null,
+      "end": "2025-07",
       "context": "internship",
-      "domains": ["web"],
-      "stack": [],
+      "domains": [
+        "data",
+        "web"
+      ],
+      "stack": [
+        "Rust",
+        "PostgreSQL",
+        "X API",
+        "Bluesky API",
+        "Git",
+        "WSL"
+      ],
       "confidential": false,
       "cover": "uploads/project-cocktail/Cocktail_Etude.jpeg",
-      "legacy_page": "project/project-cocktail.html",
-      "links": { "repo": null, "demo": null, "doc": null },
+      "legacy_page": null,
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [
+        {
+          "src": "uploads/project-cocktail/Cocktail_Accueil.jpeg",
+          "fr": "Page d'accueil de la plateforme Cocktail",
+          "en": "Cocktail platform home page"
+        },
+        {
+          "src": "uploads/project-cocktail/Cocktail_Etude.jpeg",
+          "fr": "Gestion des études menées",
+          "en": "Managing the studies carried out"
+        },
+        {
+          "src": "uploads/project-cocktail/Cocktail_Nom-etude.png",
+          "fr": "Configuration d'une étude (exemple : Mpox)",
+          "en": "Configuring a study (example: Mpox)"
+        },
+        {
+          "src": "uploads/project-cocktail/Cocktail_CollectMpox.jpeg",
+          "fr": "Collecte de données sur le sujet Mpox",
+          "en": "Data collection on the Mpox topic"
+        },
+        {
+          "src": "uploads/project-cocktail/Cocktail_Tweet.jpeg",
+          "fr": "Visualisation des messages collectés",
+          "en": "Viewing the collected messages"
+        },
+        {
+          "src": "uploads/project-cocktail/Cocktail_GraphTweet.jpeg",
+          "fr": "Graphiques d'analyse des données collectées",
+          "en": "Analysis charts of the collected data"
+        }
+      ],
       "fr": {
         "title": "Projet Cocktail",
-        "tagline": "Stage de fin d'études : remise en état du projet Cocktail",
-        "role": "",
-        "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "tagline": "Stage de 4 mois : remise en état d'un observatoire des tendances sur X et Bluesky",
+        "role": "Stagiaire, en binôme",
+        "result": "Plateforme réinstallée sur les serveurs de l'Université de Bourgogne, avec une collecte fonctionnelle sur X et Bluesky grâce à un module Rust intégré.",
+        "sections": {
+          "context": "Cocktail est une plateforme web qui analyse les tendances et les discours émergents sur les réseaux sociaux X et Bluesky. Elle s'inscrit dans un projet de recherche cofinancé par l'Union européenne et doit donner aux chercheurs un outil d'analyse réactif et accessible.\nPendant mon stage de 4 mois, nous avons repris une plateforme existante, presque sans documentation, pour la remettre en état. Quatre missions de départ : la réinstaller depuis les serveurs d'ATOL CD vers ceux de l'Université de Bourgogne, adapter la collecte à la nouvelle API de X, ajouter l'import/export CSV et de nouvelles vues de tri, et rendre le parcours assez simple pour que les chercheurs exploitent les données sans aide technique.",
+          "approach": "L'ancien système reposait sur un outil de collecte séparé, Garuda (écrit en Scala), utilisable seulement en ligne de commande sur le serveur, avec arrêt et redémarrage des services à chaque import. Il était réservé à des développeurs experts et trop lent pour une analyse en temps réel.\nNous l'avons supprimé et remplacé par un module de collecte écrit en Rust, intégré directement à Cocktail : la collecte sur X et sur Bluesky se fait désormais depuis une seule interface.\nNous avons aussi ajouté l'import et l'export CSV (pour tester et réutiliser des données passées), de nouvelles interfaces de tri et de visualisation, et une documentation complète d'un projet qui n'en avait aucune : installation, commentaires de code, schémas d'architecture et guides utilisateur.\nLes APIs et les cas limites ont été validés avec de vrais fichiers CSV, puis la plateforme a été installée sur les serveurs de l'Université de Bourgogne, avec configuration des droits d'accès et procédures de maintenance.",
+          "architecture": "Backend en Rust, données stockées et traitées dans PostgreSQL.\nCollecte via les APIs de X et de Bluesky, import de données par fichiers CSV.\nVersionnement avec GitHub, tests dans une machine virtuelle (WSL).\nLe nouveau module de collecte remplace l'ancien outil Scala et s'intègre à la plateforme sous une interface unique.",
+          "challenges": "Côté technique : apprendre Rust en autonomie pour remplacer une application Scala ; explorer un code source sans documentation (rétro-ingénierie) et documenter ce que nous découvrions ; migrer la collecte de X vers la version 2 de l'API, sans laquelle plus aucune donnée ne pouvait être récupérée, avec un compte chercheur professionnel qu'il a fallu attendre longtemps ; faire une veille continue sur les bibliothèques Rust adaptées.\nCôté organisation : travailler en binôme sans encadrement technique, avec des objectifs mais sans cahier des charges, qui se précisaient au fil des échanges avec notre maître de stage ; planifier seuls le travail sur 4 mois ; expliquer chaque problème et chaque solution à un maître de stage qui n'était pas spécialiste en informatique.",
+          "outcome": "Ce stage m'a appris à avancer dans l'incertitude tout en gardant l'utilisateur final en tête : des chercheurs qui ont besoin d'un outil simple et utile.\nCompétences acquises : Rust, architecture d'applications web (backend, routes, autorisations d'accès), gestion des APIs X et Bluesky et des pipelines de données, déploiement sur des serveurs universitaires, documentation technique.\nIl m'a aussi renforcé en gestion de projet sur la durée, en veille technique et en vulgarisation auprès de non-spécialistes."
+        }
       },
       "en": {
-        "title": "Projet Cocktail",
-        "tagline": "Final-year internship: restoring the Cocktail project",
-        "role": "",
-        "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "title": "Cocktail Project",
+        "tagline": "4-month internship: restoring a trends observatory for X and Bluesky",
+        "role": "Intern, working in a pair",
+        "result": "Platform reinstalled on the University of Burgundy's servers, with working data collection on X and Bluesky through an integrated Rust module.",
+        "sections": {
+          "context": "Cocktail is a web platform that analyses emerging trends and discourse on the social networks X and Bluesky. It is part of a research project co-funded by the European Union and is meant to give researchers a responsive, accessible analysis tool.\nDuring my 4-month internship, we took over an existing platform with almost no documentation and brought it back into working order. We had four initial missions: reinstall it from ATOL CD's servers onto the University of Burgundy's, adapt data collection to the new X API, add CSV import/export and new sorting views, and make the user journey simple enough for researchers to work with the data without technical help.",
+          "approach": "The old system relied on a separate collection tool, Garuda (written in Scala), which could only be run from the command line on the server, with services stopped and restarted for every import. It was reserved for expert developers and too slow for real-time analysis.\nWe removed it and replaced it with a collection module written in Rust and built directly into Cocktail: collecting from X and from Bluesky is now done from a single interface.\nWe also added CSV import and export (to test and reuse past data), new sorting and visualisation interfaces, and full documentation for a project that had none: installation steps, code comments, architecture diagrams and user guides.\nThe APIs and edge cases were validated with real CSV files, then the platform was installed on the University of Burgundy's servers, with access rights configured and maintenance procedures written.",
+          "architecture": "Backend in Rust, with data stored and processed in PostgreSQL.\nData collection through the X and Bluesky APIs, data import through CSV files.\nVersion control on GitHub, testing in a virtual machine (WSL).\nThe new collection module replaces the old Scala tool and is part of the platform, under one interface.",
+          "challenges": "Technical side: teaching myself Rust to replace an existing Scala application; exploring an undocumented code base (reverse engineering) and documenting what we found; migrating collection to version 2 of the X API, without which no data could be retrieved at all, using a professional researcher account that we had to wait a long time for; keeping up with suitable Rust libraries.\nOrganisational side: working as a pair with no technical supervision, with goals but no specification, which became clearer through discussions with our internship supervisor; planning four months of work ourselves; explaining every problem and every solution to a supervisor who was not a computing specialist.",
+          "outcome": "This internship taught me to move forward through uncertainty while keeping the end user in mind: researchers who need a simple, useful tool.\nSkills gained: Rust, web application architecture (backend, routes, access permissions), handling the X and Bluesky APIs and data pipelines, deployment on university servers, technical documentation.\nIt also strengthened my long-term project management, technical watch and ability to explain technical topics to non-specialists."
+        }
       }
     },
     {
@@ -35,25 +93,71 @@
       "start": "2024-11",
       "end": null,
       "context": "personal",
-      "domains": ["web"],
-      "stack": [],
+      "domains": [
+        "web"
+      ],
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Pages",
+        "Git"
+      ],
       "confidential": false,
       "cover": "uploads/project-portfolio/portfolio-index.png",
-      "legacy_page": "project/project-portfolio.html",
-      "links": { "repo": "https://github.com/OIILury/portfolio", "demo": null, "doc": null },
+      "legacy_page": null,
+      "links": {
+        "repo": "https://github.com/OIILury/portfolio",
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [
+        {
+          "src": "uploads/project-portfolio/portfolio-index.png",
+          "fr": "Page d'accueil",
+          "en": "Home page"
+        },
+        {
+          "src": "uploads/project-portfolio/portfolio-project.png",
+          "fr": "Page des projets",
+          "en": "Projects page"
+        },
+        {
+          "src": "uploads/project-portfolio/portfolio-about.png",
+          "fr": "Page Info",
+          "en": "About page"
+        },
+        {
+          "src": "uploads/project-portfolio/portfolio-contact.png",
+          "fr": "Page Contact",
+          "en": "Contact page"
+        }
+      ],
       "fr": {
         "title": "Portfolio personnel",
-        "tagline": "Site web responsive pour présenter mes projets et compétences",
-        "role": "",
+        "tagline": "Site bilingue pour présenter mes projets et mes compétences",
+        "role": "Conception, design et développement (projet personnel)",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "Ce site centralise les projets réalisés pendant mon parcours à l'IUT et à l'école d'ingénieurs, ainsi que mes travaux personnels. C'est aussi un espace pour expérimenter et progresser en développement web, surtout sur le front-end et l'interface utilisateur, et un outil de communication qui présente mes compétences, mon sens du design et mon autonomie.\nIl a été créé en novembre 2024 et refondu en 2026 : nouvelle charte graphique, version française et anglaise, projets alimentés par des fichiers de données.",
+          "approach": "Le site est écrit en HTML, CSS et JavaScript natifs, sans framework ni bibliothèque, et hébergé gratuitement sur GitHub Pages, avec un déploiement à chaque mise à jour du code.\nLa refonte a apporté des variables de design partagées (couleurs, polices) avec un thème clair et sombre, un système de traduction FR/EN par fichiers JSON, et des projets décrits dans un fichier de données qui alimente la grille de projets, la page de détail et l'accueil.\nLe site s'adapte aux ordinateurs, tablettes et smartphones grâce aux media queries, à flexbox et à CSS Grid, et a été testé sur Firefox, Edge et Chrome.",
+          "architecture": "Pages statiques (accueil, projets, info, contact, détail d'un projet) qui partagent les mêmes feuilles de style : variables de design, composants et mise en page.\nDonnées en JSON : projets, compétences et textes des deux langues.\nScripts JavaScript séparés par fonction : traduction, thème clair/sombre, grille de projets, page de détail, cube 3D de l'accueil.",
+          "challenges": "Penser le site du point de vue du visiteur : parcours de navigation, organisation des contenus, équilibre entre simplicité et mise en valeur des projets.\nGarder une interface cohérente et responsive sans framework CSS, avec un thème clair et sombre.\nPasser d'un site écrit page par page à une structure alimentée par des données, tout en le rendant bilingue.",
+          "outcome": "Compétences renforcées : fondamentaux du web (HTML, CSS et JavaScript natifs), responsive design, architecture de l'information, organisation d'un projet qui évolue sur plusieurs mois.\nSuite : ajouter régulièrement de nouveaux projets au fil de mes réalisations."
+        }
       },
       "en": {
         "title": "Personal portfolio",
-        "tagline": "Responsive website showcasing my projects and skills",
-        "role": "",
+        "tagline": "Bilingual website showcasing my projects and skills",
+        "role": "Design and development (personal project)",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "This website brings together the projects I built during my time at the IUT and at engineering school, along with my personal work. It is also a place to experiment and improve in web development, mainly front-end and user interface, and a communication tool that shows my skills, my sense of design and my autonomy.\nIt was created in November 2024 and redesigned in 2026: new visual identity, French and English versions, and projects driven by data files.",
+          "approach": "The site is written in plain HTML, CSS and JavaScript, with no framework or library, and hosted for free on GitHub Pages, with a deployment on every code update.\nThe redesign brought shared design variables (colours, fonts) with a light and dark theme, an FR/EN translation system based on JSON files, and projects described in a data file that feeds the project grid, the detail page and the home page.\nThe site adapts to computers, tablets and smartphones using media queries, flexbox and CSS Grid, and was tested on Firefox, Edge and Chrome.",
+          "architecture": "Static pages (home, projects, info, contact, project detail) that share the same stylesheets: design variables, components and layout.\nData in JSON: projects, skills and the texts for both languages.\nJavaScript split by role: translation, light/dark theme, project grid, detail page, the home page's 3D cube.",
+          "challenges": "Thinking about the site from the visitor's point of view: navigation paths, content organisation, a balance between simplicity and showcasing the projects.\nKeeping a consistent, responsive interface without a CSS framework, with a light and dark theme.\nMoving from a site written page by page to a data-driven structure, while making it bilingual.",
+          "outcome": "Skills strengthened: web fundamentals (plain HTML, CSS and JavaScript), responsive design, information architecture, running a project that evolves over several months.\nNext: regularly adding new projects as I complete them."
+        }
       }
     },
     {
@@ -63,25 +167,86 @@
       "start": "2024-11",
       "end": null,
       "context": "personal",
-      "domains": ["game"],
-      "stack": ["Python"],
+      "domains": [
+        "game"
+      ],
+      "stack": [
+        "Python",
+        "Tkinter",
+        "JSON",
+        "PyInstaller",
+        "Git"
+      ],
       "confidential": false,
       "cover": "uploads/project-miniJeux/miniJeux-accueil.png",
-      "legacy_page": "project/project-minijeux.html",
-      "links": { "repo": "https://github.com/OIILury/Mini-jeux", "demo": null, "doc": null },
+      "legacy_page": null,
+      "links": {
+        "repo": "https://github.com/OIILury/Mini-jeux",
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [
+        {
+          "src": "uploads/project-miniJeux/miniJeux-accueil.png",
+          "fr": "Page d'accueil de l'application",
+          "en": "Application home page"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-catalogue.png",
+          "fr": "Catalogue des 5 jeux",
+          "en": "Catalogue of the 5 games"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-calculMental.png",
+          "fr": "Calcul Mental",
+          "en": "Mental Math"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-devineNombre.png",
+          "fr": "Devine le Nombre",
+          "en": "Guess the Number"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-machineSous.png",
+          "fr": "Machine à Sous",
+          "en": "Slot Machine"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-jeuFrappe.png",
+          "fr": "Jeu de Frappe",
+          "en": "Typing Game"
+        },
+        {
+          "src": "uploads/project-miniJeux/miniJeux-tamagochi.png",
+          "fr": "Tamagotchi",
+          "en": "Tamagotchi"
+        }
+      ],
       "fr": {
         "title": "Application Mini-Jeux Python",
         "tagline": "Collection de mini-jeux en Python avec interface graphique",
-        "role": "",
-        "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "role": "Conception et développement (projet personnel)",
+        "result": "Application autonome livrée sous forme d'exécutable (PyInstaller), avec 5 jeux et des scores sauvegardés.",
+        "sections": {
+          "context": "Mini-Jeux est une application Python avec interface graphique (Tkinter) qui regroupe 5 mini-jeux : Devine le Nombre, Calcul Mental, Machine à Sous, Jeu de Frappe et Tamagotchi. Elle est conçue comme une plateforme de jeux avec un système de scores intégré.\nElle démontre ma maîtrise de la programmation orientée objet en Python et ma capacité à créer une interface claire et un système de sauvegarde de données.",
+          "approach": "Le menu principal propose une navigation simple, un mode plein écran et une fenêtre dédiée pour chaque jeu.\nDevine le Nombre : trouver un nombre entre 1 et 100 en 10 essais maximum, avec des indices « plus grand / plus petit ».\nCalcul Mental : additions, soustractions et multiplications, en mode chronométré (60 secondes) ou en mode vies (3 vies, 10 problèmes).\nMachine à Sous : 3 rouleaux, 6 symboles, paris de 10 à 100 crédits.\nJeu de Frappe : dictionnaire de 400 000 mots, en mode normal (20 mots) ou chronométré (60 secondes), avec un score basé sur la vitesse et la précision.\nTamagotchi : élevage virtuel avec statistiques (HP, ATK, DEF, MANA, SPD, LUCK), combats, collecte d'objets et sauvegarde automatique.",
+          "architecture": "Architecture modulaire : chaque jeu hérite d'une classe abstraite commune, BaseGame, qui définit l'interface partagée.\nUn GameManager central instancie les jeux selon le patron Factory, ce qui permet d'en ajouter facilement de nouveaux.\nLes scores sont sauvegardés en JSON, avec tri automatique et limite aux 10 meilleurs scores par jeu.\nOrganisation du code : main.py (point d'entrée), games/ (jeux et gestionnaire), utils/ (interface et scores), assets/ (images, dictionnaire, icônes), build_exe.py (création de l'exécutable avec PyInstaller).",
+          "challenges": "Concevoir une architecture orientée objet robuste, avec héritage et abstraction, qui garde une interface cohérente d'un jeu à l'autre.\nGérer les événements Tkinter : clics, minuteurs, animations, et synchroniser l'interface avec la logique de chaque jeu.\nFiabiliser la sauvegarde JSON : gestion des erreurs et des fichiers corrompus, tri des scores.\nOptimiser les performances : dictionnaire de 400 000 mots en mémoire, animations et minuteurs, exécutable autonome avec PyInstaller.",
+          "outcome": "Compétences acquises : programmation orientée objet en Python, interfaces Tkinter, persistance de données JSON, création d'exécutables avec PyInstaller, gestion d'un projet de A à Z en autonomie.\nPistes d'évolution : de nouveaux jeux, des profils utilisateurs avec statistiques, un mode multijoueur local, des tests unitaires, une documentation technique et la gestion des dépendances avec pip et requirements.txt.\nLe projet reste un terrain d'expérimentation où j'intègre mes nouveaux apprentissages."
+        }
       },
       "en": {
         "title": "Python Mini-Games App",
-        "tagline": "Python mini-games collection with a graphical interface",
-        "role": "",
-        "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "tagline": "A collection of mini-games in Python with a graphical interface",
+        "role": "Design and development (personal project)",
+        "result": "Standalone application delivered as an executable (PyInstaller), with 5 games and saved scores.",
+        "sections": {
+          "context": "Mini-Games is a Python application with a graphical interface (Tkinter) that brings together 5 mini-games: Guess the Number, Mental Math, Slot Machine, Typing Game and Tamagotchi. It is designed as a game platform with a built-in scoring system.\nIt shows my command of object-oriented programming in Python and my ability to build a clear interface and a data-saving system.",
+          "approach": "The main menu offers simple navigation, a full-screen mode and a dedicated window for each game.\nGuess the Number: find a number between 1 and 100 in at most 10 attempts, with \"higher / lower\" hints.\nMental Math: addition, subtraction and multiplication, in timed mode (60 seconds) or lives mode (3 lives, 10 problems).\nSlot Machine: 3 reels, 6 symbols, bets from 10 to 100 credits.\nTyping Game: a 400,000-word dictionary, in normal mode (20 words) or timed mode (60 seconds), with a score based on speed and accuracy.\nTamagotchi: virtual pet with stats (HP, ATK, DEF, MANA, SPD, LUCK), battles, item collection and automatic saving.",
+          "architecture": "Modular architecture: every game inherits from a shared abstract class, BaseGame, which defines the common interface.\nA central GameManager creates the games using the Factory pattern, which makes it easy to add new ones.\nScores are saved in JSON, with automatic sorting and a limit of the 10 best scores per game.\nCode layout: main.py (entry point), games/ (games and manager), utils/ (interface and scores), assets/ (images, dictionary, icons), build_exe.py (builds the executable with PyInstaller).",
+          "challenges": "Designing a robust object-oriented architecture, with inheritance and abstraction, that keeps the interface consistent from one game to the next.\nHandling Tkinter events: clicks, timers, animations, and keeping the interface in sync with each game's logic.\nMaking JSON saving reliable: error handling, corrupted files, score sorting.\nOptimising performance: a 400,000-word dictionary in memory, animations and timers, a standalone executable with PyInstaller.",
+          "outcome": "Skills gained: object-oriented programming in Python, Tkinter interfaces, JSON data persistence, building executables with PyInstaller, running a project from start to finish on my own.\nPossible improvements: new games, user profiles with statistics, local multiplayer, unit tests, technical documentation and dependency management with pip and requirements.txt.\nThe project remains a testing ground where I apply what I learn."
+        }
       }
     },
     {
@@ -91,25 +256,44 @@
       "start": "2024-12",
       "end": null,
       "context": "team",
-      "domains": ["web"],
+      "domains": [
+        "web"
+      ],
       "stack": [],
       "confidential": false,
       "cover": "uploads/project-talcmexicain/logo-talc.png",
       "legacy_page": "project/project-talcmexicain.html",
-      "links": { "repo": "https://github.com/OIILury/TalcMexicains", "demo": null, "doc": null },
+      "links": {
+        "repo": "https://github.com/OIILury/TalcMexicains",
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Site Web Talc Mexicain",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Site Web Talc Mexicain",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -119,25 +303,46 @@
       "start": "2024-02",
       "end": null,
       "context": "internship",
-      "domains": ["web"],
-      "stack": ["WordPress"],
+      "domains": [
+        "web"
+      ],
+      "stack": [
+        "WordPress"
+      ],
       "confidential": false,
       "cover": "uploads/project-c2rb/logo-c2rb.png",
       "legacy_page": "project/project-c2rb.html",
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Site Web C2RB",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Site Web C2RB",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -147,25 +352,45 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["ia", "web"],
+      "domains": [
+        "ia",
+        "web"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": "https://github.com/OIILury/Aqua-Verify", "demo": null, "doc": null },
+      "links": {
+        "repo": "https://github.com/OIILury/Aqua-Verify",
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Aqua Verify",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Aqua Verify",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -175,25 +400,48 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["ia"],
-      "stack": ["Python", "FastAPI", "Ollama"],
+      "domains": [
+        "ia"
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Ollama"
+      ],
       "confidential": true,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": "https://github.com/OIILury/ai-microservice", "demo": null, "doc": null },
+      "links": {
+        "repo": "https://github.com/OIILury/ai-microservice",
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "AI Microservice",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "AI Microservice",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -203,25 +451,44 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["data"],
+      "domains": [
+        "data"
+      ],
       "stack": [],
       "confidential": true,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Reporting ERP automatisé",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Automated ERP reporting",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -231,25 +498,46 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["tools"],
-      "stack": ["Python"],
+      "domains": [
+        "tools"
+      ],
+      "stack": [
+        "Python"
+      ],
       "confidential": true,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Convertisseur Excel vers export paie",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Excel to payroll export converter",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -259,25 +547,44 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["iot"],
+      "domains": [
+        "iot"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Serveur web sur ESP32",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "ESP32 web server",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -292,20 +599,37 @@
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Maurice",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Maurice",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -315,25 +639,44 @@
       "start": "",
       "end": null,
       "context": "school",
-      "domains": ["data"],
+      "domains": [
+        "data"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Big Data : Hadoop, Spark, Parquet",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Big Data: Hadoop, Spark, Parquet",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -343,25 +686,44 @@
       "start": "",
       "end": null,
       "context": "school",
-      "domains": ["cloud"],
+      "domains": [
+        "cloud"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Cloud : Kubernetes, MongoDB, S3",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Cloud: Kubernetes, MongoDB, S3",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -371,25 +733,44 @@
       "start": "",
       "end": null,
       "context": "",
-      "domains": ["game"],
+      "domains": [
+        "game"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Molécules 3D dans Minecraft",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "3D molecules in Minecraft",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -404,20 +785,37 @@
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "TripBot",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "TripBot",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -432,20 +830,37 @@
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "DataEcho",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "DataEcho",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     },
     {
@@ -455,25 +870,44 @@
       "start": null,
       "end": null,
       "context": "",
-      "domains": ["web"],
+      "domains": [
+        "web"
+      ],
       "stack": [],
       "confidential": false,
       "cover": null,
       "legacy_page": null,
-      "links": { "repo": null, "demo": null, "doc": null },
+      "links": {
+        "repo": null,
+        "demo": null,
+        "doc": null
+      },
+      "gallery": [],
       "fr": {
         "title": "Site web de pointage",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       },
       "en": {
         "title": "Time-tracking web app",
         "tagline": "",
         "role": "",
         "result": "",
-        "sections": { "context": "", "approach": "", "architecture": "", "challenges": "", "outcome": "" }
+        "sections": {
+          "context": "",
+          "approach": "",
+          "architecture": "",
+          "challenges": "",
+          "outcome": ""
+        }
       }
     }
   ]
