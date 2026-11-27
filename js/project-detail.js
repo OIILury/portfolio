@@ -80,7 +80,20 @@
 
         const title = pickText(project, lang, "title");
         const tagline = pickText(project, lang, "tagline");
-        document.title = (title || project.slug) + " - Portfolio";
+        const fullTitle = (title || project.slug) + " - Portfolio";
+        document.title = fullTitle;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && tagline) {
+            metaDesc.setAttribute("content", tagline);
+        }
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) {
+            ogTitle.setAttribute("content", fullTitle);
+        }
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc && tagline) {
+            ogDesc.setAttribute("content", tagline);
+        }
 
         const header = el("header", "tech-header");
         header.appendChild(el("span", "tech-path", "~/portfolio/projects/" + project.slug));
