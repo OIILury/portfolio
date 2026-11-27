@@ -472,3 +472,30 @@ body.dark-mode .contact-icon {
     grid-template-columns: 1fr;
   }
 }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.project-gallery figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-gallery figcaption {
+  font: 400 0.8rem/1.4 var(--font-mono);
+  color: var(--text-muted);
+}

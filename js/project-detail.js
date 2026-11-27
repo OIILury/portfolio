@@ -174,6 +174,38 @@
             main.appendChild(section);
         });
 
+        if (Array.isArray(project.gallery) && project.gallery.length > 0) {
+            const otherLang = lang === "fr" ? "en" : "fr";
+            const gallerySection = el("section", "project-section");
+            gallerySection.appendChild(el("h2", "", t("project_gallery")));
+            const galleryGrid = el("div", "project-gallery");
+            project.gallery.forEach(function (item) {
+                if (!item || !item.src) {
+                    return;
+                }
+                const caption = item[lang] || item[otherLang] || "";
+                const figure = el("figure");
+                const link = el("a");
+                link.setAttribute("href", item.src);
+                link.setAttribute("target", "_blank");
+                link.setAttribute("rel", "noopener noreferrer");
+
+                const img = el("img");
+                img.setAttribute("src", item.src);
+                img.setAttribute("loading", "lazy");
+                img.setAttribute("alt", caption);
+                link.appendChild(img);
+                figure.appendChild(link);
+
+                const figcaption = el("figcaption");
+                figcaption.textContent = caption;
+                figure.appendChild(figcaption);
+                galleryGrid.appendChild(figure);
+            });
+            gallerySection.appendChild(galleryGrid);
+            main.appendChild(gallerySection);
+        }
+
         if (project.legacy_page) {
             const legacyWrap = el("div", "project-legacy");
             const legacyLink = el("a", "tech-link", t("project_legacy"));
